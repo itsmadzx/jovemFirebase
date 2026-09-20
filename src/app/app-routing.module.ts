@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'item-detail/:id', //rota para editar item existente
     loadChildren: () => import('./pages/item-detail/item-detail.module').then( m => m.ItemDetailPageModule)
+  },
+  {
+    path: 'cursos',
+    loadChildren: () => import('./tcc/cursos/cursos.module').then( m => m.CursosPageModule)
+  },
+  {
+    path: 'vagas',
+    loadChildren: () => import('./tcc/vagas/vagas.module').then( m => m.VagasPageModule)
   }
 ];
 

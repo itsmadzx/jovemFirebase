@@ -44,7 +44,7 @@ export class DataService{
     //retorna um item especifico pelo ID
     getItem(id: string): Observable<Item | undefined> {
         //cria uma referência para o documento específico
-        const itemDocRef = doc(this.firestore, `item/${id}`);
+        const itemDocRef = doc(this.firestore, `items/${id}`);
         //retorna os dados do documento como um Observable, incluindo o ID do documento
         return docData(itemDocRef, { idField: 'id' }) as Observable<Item | undefined>;
     }

@@ -1,0 +1,154 @@
+ion-content {
+  --background: #f8f8ff;
+}
+
+ion-toolbar {
+  --background: #040094;
+  --color: white;
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+.pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 22px;
+
+  h1 {
+    color: #1e293b;
+    font-size: 27px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+ion-searchbar {
+  --background: white;
+  --border-radius: 12px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --color: #1e293b;
+  --placeholder-color: #64748b;
+
+  padding: 0;
+  margin-bottom: 22px;
+}
+
+.lista-instituicoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.instituicao-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  min-height: 210px;
+  display: flex;
+}
+
+.instituicao-conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.instituicao-card h2 {
+  color: #5b21b6;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.instituicao-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.botao-acessar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: fit-content;
+
+  background: #040094;
+  color: white;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  margin-top: auto;
+}
+
+.botao-acessar:hover {
+  background: #161361;
+}
+
+.botao-acessar ion-icon {
+  font-size: 16px;
+}
+
+.sem-resultados {
+  text-align: center;
+  padding: 50px 20px;
+  color: #64748b;
+
+  ion-icon {
+    font-size: 45px;
+    color: #6964fa;
+  }
+
+  h2 {
+    color: #1e293b;
+    font-size: 19px;
+    margin: 12px 0 6px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+/* Celular */
+
+@media (max-width: 700px) {
+
+  .pagina {
+    padding: 20px 14px 35px;
+  }
+
+  .cabecalho h1 {
+    font-size: 24px;
+  }
+
+  .lista-instituicoes {
+    grid-template-columns: 1fr;
+  }
+
+}

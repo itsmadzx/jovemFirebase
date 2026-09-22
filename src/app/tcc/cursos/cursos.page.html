@@ -1,13 +1,70 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>cursos</ion-title>
+    <ion-title>Cursos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cursos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <div class="pagina">
+
+    <div class="cabecalho">
+
+      <h1>
+        Encontre seu próximo curso 🎓
+      </h1>
+
+      <p>
+        Cursos gratuitos e profissionalizantes para ajudar você
+        a desenvolver novas habilidades e entrar no mercado de trabalho.
+      </p>
+
+    </div>
+
+
+    <ion-searchbar [(ngModel)]="pesquisa" (ionInput)="pesquisar()" placeholder="Pesquisar instituições..." 
+    aria-label="Pesquisar instituições">
+    </ion-searchbar>
+
+
+    <div class="lista-instituicoes">
+
+      <div
+        class="instituicao-card"
+        *ngFor="let instituicao of instituicoesFiltradas">
+
+        <div class="instituicao-conteudo">
+
+          <h2>
+            {{ instituicao.nome }}
+          </h2>
+
+          <p>
+            {{ instituicao.descricao }}
+          </p>
+
+          <a class="botao-acessar" [href]="instituicao.link" target="_blank" rel="noopener noreferrer">
+            Acessar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class="sem-resultados"
+      *ngIf="instituicoesFiltradas.length === 0">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <h2>Nenhuma instituição encontrada</h2>
+
+      <p>
+        Tente pesquisar outra instituição.
+      </p>
+
+    </div>
+
+  </div>
+
 </ion-content>

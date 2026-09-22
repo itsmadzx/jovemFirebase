@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Teste Vocacional</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pagina">
+
+    <div class="teste" *ngIf="!testeFinalizado">
+
+      <div class="cabecalho">
+        <h1>Descubra seu perfil</h1>
+        <p>
+          Responda algumas perguntas e descubra quais áreas
+          podem combinar com você.
+        </p>
+      </div>
+
+      <div class="progresso">
+        Pergunta {{ perguntaAtual + 1 }} de {{ perguntas.length }}
+      </div>
+
+      <div class="pergunta-card">
+
+        <h2>
+          {{ perguntas[perguntaAtual].pergunta }}
+        </h2>
+
+        <div class="alternativas">
+
+          <button
+            *ngFor="let alternativa of perguntas[perguntaAtual].alternativas"
+            class="alternativa"
+            [class.selecionada]="respostaSelecionada === alternativa"
+            (click)="selecionarResposta(alternativa)">
+            {{ alternativa }}
+          </button>
+
+        </div>
+
+        <button
+          class="botao-continuar"
+          [disabled]="!respostaSelecionada"
+          (click)="continuar()">
+
+          {{ perguntaAtual === perguntas.length - 1
+            ? 'Ver resultado ✨'
+            : 'Continuar →' }}
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="resultado" *ngIf="testeFinalizado">
+
+      <div class="resultado-icone">
+        <ion-icon name="sparkles-outline"></ion-icon>
+      </div>
+
+      <h1>Seu resultado</h1>
+
+      <p>
+        Depois de fazer nosso teste, confira os cursos e vagas disponíveis e descubra
+        quais oportunidades combinam com seus interesses.
+      </p>
+
+      <div class="atalhos">
+
+        <a
+          routerLink="/cursos"
+          class="atalho">
+
+          <div class="atalho-icone">
+            <ion-icon name="school-outline"></ion-icon>
+          </div>
+
+          <div>
+            <strong>Cursos recomendados</strong>
+            <span>
+              Encontre cursos para desenvolver suas habilidades.
+            </span>
+          </div>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+
+
+        <a
+          routerLink="/vagas"
+          class="atalho">
+
+          <div class="atalho-icone">
+            <ion-icon name="briefcase-outline"></ion-icon>
+          </div>
+
+          <div>
+            <strong>Vagas recomendadas</strong>
+            <span>
+              Confira oportunidades relacionadas aos seus interesses.
+            </span>
+          </div>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+
+      </div>
+
+      <button
+        class="botao-refazer"
+        (click)="reiniciarTeste()">
+        Refazer teste
+      </button>
+
+    </div>
+
+  </div>
+</ion-content>

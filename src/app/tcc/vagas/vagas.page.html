@@ -1,13 +1,71 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>vagas</ion-title>
+    <ion-title>Vagas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">vagas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="pagina">
+
+    <div class="cabecalho">
+      <h1>Encontre sua próxima oportunidade 💼</h1>
+
+      <p>
+        Confira plataformas com vagas de estágio, jovem aprendiz
+        e primeiro emprego para começar sua carreira.
+      </p>
+    </div>
+
+    <ion-searchbar
+      [(ngModel)]="pesquisa"
+      (ionInput)="pesquisar()"
+      placeholder="Pesquisar plataformas..."
+      aria-label="Pesquisar plataformas">
+    </ion-searchbar>
+
+
+    <div class="lista-plataformas">
+
+      <div
+        class="plataforma-card"
+        *ngFor="let plataforma of plataformasFiltradas">
+
+        <div class="plataforma-conteudo">
+
+          <h2>{{ plataforma.nome }}</h2>
+
+          <p>
+            {{ plataforma.descricao }}
+          </p>
+
+          <a
+            class="botao-acessar"
+            [href]="plataforma.link"
+            target="_blank"
+            rel="noopener noreferrer">
+            Acessar
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="sem-resultados"
+      *ngIf="plataformasFiltradas.length === 0">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <h2>Nenhuma plataforma encontrada</h2>
+
+      <p>
+        Tente pesquisar outra plataforma.
+      </p>
+
+    </div>
+
+  </div>
 </ion-content>

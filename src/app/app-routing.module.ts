@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'vagas',
     loadChildren: () => import('./tcc/vagas/vagas.module').then( m => m.VagasPageModule)
+  },  {
+    path: 'vocacional',
+    loadChildren: () => import('./tcc/vocacional/vocacional.module').then( m => m.VocacionalPageModule)
   }
+
 ];
 
 @NgModule({

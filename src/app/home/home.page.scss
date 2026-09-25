@@ -6,34 +6,59 @@ ion-content {
   box-sizing: border-box;
 }
 
-
 /* =========================
    CABEÇALHO
-========================= */
+   ========================= */
 
 .header {
+  width: 100%;
   height: 265px;
 
-  background: linear-gradient(
-    145deg,
-    #101b9e,
-    #1212a5
-  );
+  background: #151da3;
 
-  border-radius: 0 0 32px 32px;
+  border-radius: 0 0 35px 35px;
 
-  padding: 75px 35px 0;
+  padding: 55px 60px 0;
+
+  box-sizing: border-box;
+
+  position: relative;
 
   color: white;
+}
+
+/* Área do usuário */
+
+.header-user {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
 
   position: relative;
 }
 
-.header-user {
+/* Botão do perfil */
+
+.profile-button {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 25px;
+
+  background: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+
+  color: white;
+
+  cursor: pointer;
+
+  text-align: left;
 }
+
+/* Foto */
 
 .profile-photo {
   width: 105px;
@@ -41,46 +66,72 @@ ion-content {
 
   border-radius: 50%;
 
-  background: #ddd;
+  background: #eeeeee;
 
-  border: 3px solid #7773ff;
+  border: 4px solid #746cff;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 }
 
 .profile-photo span {
-  color: #252bc4;
-  font-weight: bold;
-  font-size: 25px;
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #2735c4;
 }
+
+
+/* Texto de boas-vindas */
 
 .welcome {
   display: flex;
   flex-direction: column;
+
+  gap: 4px;
 }
 
 .welcome span {
-  font-size: 23px;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .welcome strong {
-  font-size: 32px;
-  margin-top: 5px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-.notification {
+
+/* Botão de notificação */
+
+.notification-button {
   position: absolute;
 
-  right: 35px;
-  top: 105px;
+  right: 5px;
+  top: 15px;
 
-  font-size: 38px;
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
 
   color: white;
+
+  cursor: pointer;
 }
 
+.notification-button ion-icon {
+  font-size: 32px;
+}
 
 /* =========================
    PESQUISA

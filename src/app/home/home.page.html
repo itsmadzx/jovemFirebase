@@ -1,28 +1,41 @@
 <ion-content [fullscreen]="true">
 
   <!-- CABEÇALHO -->
-  <section class="header">
+    <section class="header">
 
     <div class="header-user">
 
-      <div class="profile-photo">
-        <span>MF</span>
-      </div>
+      <!-- FOTO DE PERFIL -->
+      <button
+        class="profile-button"
+        type="button"
+        routerLink="/perfil">
 
-      <div class="welcome">
-        <span>Bem-vindo(a),</span>
-        <strong>Maria Flor!</strong>
-      </div>
+        <div class="profile-photo">
+          <span>MF</span>
+        </div>
+
+        <div class="welcome">
+          <span>Bem-vindo(a),</span>
+          <strong>Maria Flor!</strong>
+        </div>
+
+      </button>
+
+      <!-- NOTIFICAÇÕES -->
+      <button
+        class="notification-button"
+        type="button">
+
+        <ion-icon
+          name="notifications-outline">
+        </ion-icon>
+
+      </button>
 
     </div>
 
-    <ion-icon
-      class="notification"
-      name="notifications-outline">
-    </ion-icon>
-
   </section>
-
 
   <!-- PESQUISA -->
   <div class="search-box">
@@ -35,7 +48,6 @@
     />
 
   </div>
-
 
   <!-- ATALHOS -->
   <section class="shortcuts">
@@ -50,7 +62,6 @@
 
     </div>
 
-
     <div class="shortcut">
 
       <div class="shortcut-icon">
@@ -64,7 +75,6 @@
 
     </div>
 
-
     <div class="shortcut">
 
       <div class="shortcut-icon">
@@ -77,7 +87,6 @@
       </strong>
 
     </div>
-
 
     <div class="shortcut">
 
@@ -120,7 +129,6 @@
 
     <div class="banner-image">
       <div class="fake-person">
-        👩🏽‍💻
       </div>
     </div>
 
@@ -132,7 +140,6 @@
     </div>
 
   </section>
-
 
   <!-- RECOMENDADOS -->
   <section class="recommended">
@@ -147,7 +154,6 @@
       </a>
 
     </div>
-
 
     <!-- CURSOS -->
     <div class="category">
@@ -201,7 +207,6 @@
       </div>
 
     </div>
-
 
     <!-- VAGAS -->
     <div class="category">

@@ -1,34 +1,316 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Meus Itens
-    </ion-title>
-    <ion-button (click)="addItem()">
-      <ion-icon name="add"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
 
-<ion-content class="ion-padding">
-  <ion-list>
-    <ion-item *ngIf="items.length === 0">
-      <ion-label>Nenhum item cadastrado ainda.</ion-label>
-    </ion-item>
+  <!-- CABEÇALHO -->
+  <section class="header">
 
-    <ion-item-sliding *ngFor="let item of items">
-      <ion-item lines="full" button (click)="editItem(item)">
-        <ion-label>
-          <h2>{{ item.name }}</h2>
-          <p>{{ item.description }}</p>
-        </ion-label>
-      </ion-item>
+    <div class="header-user">
 
-    <ion-item-options side="end">
+      <div class="profile-photo">
+        <span>MF</span>
+      </div>
 
-      <ion-item-option color="danger" (click)="deleteItem(item.id!)">
-        <ion-icon slot="icon-only" name="trash"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-  </ion-list>
+      <div class="welcome">
+        <span>Bem-vindo(a),</span>
+        <strong>Maria Flor!</strong>
+      </div>
+
+    </div>
+
+    <ion-icon
+      class="notification"
+      name="notifications-outline">
+    </ion-icon>
+
+  </section>
+
+
+  <!-- PESQUISA -->
+  <div class="search-box">
+
+    <ion-icon name="search-outline"></ion-icon>
+
+    <input
+      type="text"
+      placeholder="O que você está procurando?"
+    />
+
+  </div>
+
+
+  <!-- ATALHOS -->
+  <section class="shortcuts">
+
+    <div class="shortcut">
+
+      <div class="shortcut-icon">
+        <ion-icon name="school-outline"></ion-icon>
+      </div>
+
+      <strong>Cursos</strong>
+
+    </div>
+
+
+    <div class="shortcut">
+
+      <div class="shortcut-icon">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Assistente<br>
+        de Currículo
+      </strong>
+
+    </div>
+
+
+    <div class="shortcut">
+
+      <div class="shortcut-icon">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Primeiro<br>
+        Emprego
+      </strong>
+
+    </div>
+
+
+    <div class="shortcut">
+
+      <div class="shortcut-icon">
+        <ion-icon name="locate-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Teste<br>
+        Vocacional
+      </strong>
+
+    </div>
+
+  </section>
+
+
+  <!-- BANNER -->
+  <section class="banner">
+
+    <div class="banner-text">
+
+      <h1>
+        Dê um impulso<br>
+        no seu futuro
+      </h1>
+
+      <p>
+        Aqui você encontra o apoio
+        certo para construir a carreira
+        que deseja.
+      </p>
+
+      <button>
+        Começar agora
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+
+    </div>
+
+    <div class="banner-image">
+      <div class="fake-person">
+        👩🏽‍💻
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- RECOMENDADOS -->
+  <section class="recommended">
+
+    <div class="section-header">
+
+      <h2>Recomendados para você</h2>
+
+      <a>
+        Ver mais
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+
+    </div>
+
+
+    <!-- CURSOS -->
+    <div class="category">
+
+      <div class="category-title">
+
+        <div class="category-icon">
+          <ion-icon name="school-outline"></ion-icon>
+        </div>
+
+        <h3>Cursos</h3>
+
+      </div>
+
+
+      <div class="recommend-card">
+
+        <div class="company-logo bradesco">
+          <span>Fundação</span>
+          <strong>Bradesco</strong>
+        </div>
+
+        <div class="recommend-info">
+
+          <h4>
+            Introdução à<br>
+            Informática
+          </h4>
+
+          <div class="details">
+
+            <span>
+              <ion-icon name="time-outline"></ion-icon>
+              40h
+            </span>
+
+            <span>
+              <ion-icon name="ribbon-outline"></ion-icon>
+              Gratuito
+            </span>
+
+          </div>
+
+        </div>
+
+        <ion-icon
+          class="card-arrow"
+          name="chevron-forward-outline">
+        </ion-icon>
+
+      </div>
+
+    </div>
+
+
+    <!-- VAGAS -->
+    <div class="category">
+
+      <div class="category-title">
+
+        <div class="category-icon">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+
+        <h3>Vagas</h3>
+
+      </div>
+
+
+      <div class="recommend-card">
+
+        <div class="company-logo ciee">
+          ciee
+        </div>
+
+        <div class="recommend-info">
+
+          <h4>
+            Jovem Aprendiz
+          </h4>
+
+          <div class="details">
+
+            <span>
+              <ion-icon name="location-outline"></ion-icon>
+              São Paulo - SP
+            </span>
+
+            <span>
+              | Ensino médio
+            </span>
+
+          </div>
+
+        </div>
+
+        <ion-icon
+          class="card-arrow"
+          name="chevron-forward-outline">
+        </ion-icon>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACESSIBILIDADE -->
+  <button class="accessibility">
+
+    <ion-icon name="accessibility-outline"></ion-icon>
+
+  </button>
+
+
+  <!-- MENU INFERIOR -->
+  <nav class="bottom-menu">
+
+    <div class="bottom-item active">
+
+      <ion-icon name="home"></ion-icon>
+
+      <span>Início</span>
+
+    </div>
+
+
+    <div class="bottom-item">
+
+      <ion-icon name="school-outline"></ion-icon>
+
+      <span>Cursos</span>
+
+    </div>
+
+
+    <div class="bottom-item">
+
+      <ion-icon name="briefcase-outline"></ion-icon>
+
+      <span>Vagas</span>
+
+    </div>
+
+
+    <div class="bottom-item">
+
+      <ion-icon name="chatbubble-outline"></ion-icon>
+
+      <span>Chat</span>
+
+    </div>
+
+
+    <div class="bottom-item">
+
+      <ion-icon name="person-outline"></ion-icon>
+
+      <span>Perfil</span>
+
+    </div>
+
+  </nav>
+
 </ion-content>

@@ -29,6 +29,10 @@ const routes: Routes = [
   },  {
     path: 'vocacional',
     loadChildren: () => import('./tcc/vocacional/vocacional.module').then( m => m.VocacionalPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./tcc/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
 
 ];

@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./tcc/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'config',
+    loadChildren: () => import('./tcc/config/config.module').then( m => m.ConfigPageModule)
   }
 
 ];

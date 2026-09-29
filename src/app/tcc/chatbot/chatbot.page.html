@@ -30,11 +30,18 @@
 
       <!-- MENSAGENS -->
       <div class="messages">
-        <div
-          *ngFor="let mensagem of mensagens"
-          class="message"
+        <div *ngFor="let mensagem of mensagens" class="message"
           [class.message-user]="mensagem.tipo === 'usuario'"
           [class.message-ai]="mensagem.tipo === 'ia'">
+
+      <div class="typing-indicator" *ngIf="iaDigitando">
+        <div class="message-icon">
+          <ion-icon name="sparkles-outline"></ion-icon>
+        </div>
+        <div class="typing-bubble">
+          <span></span> <span></span> <span></span>
+        </div>
+      </div>
 
           <div class="message-icon" *ngIf="mensagem.tipo === 'ia'">
             <ion-icon name="sparkles-outline"></ion-icon>

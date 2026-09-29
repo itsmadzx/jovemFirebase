@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IaService } from '../services/ia';
 
 interface Mensagem {
   texto: string;
@@ -15,38 +16,44 @@ interface Mensagem {
 export class ChatbotPage {
 
   mensagemAtual = '';
+  iaDigitando = false;
 
   mensagens: Mensagem[] = [
     {
-      texto: 'Olá! 👋 Eu sou o Estagiário, assistente de IA do Impulso Jovem. Como posso te ajudar hoje?',
+      texto: 'Olá! 👋 Eu sou o assistente do Impulso Jovem. Como posso te ajudar hoje?',
       tipo: 'ia',
       horario: this.obterHorario()
     }
   ];
 
+  constructor(private iaService: IaService) {}
+
   enviarMensagem(): void {
     const texto = this.mensagemAtual.trim();
 
-    if (!texto) {
+    if (!texto || this.iaDigitando) {
       return;
     }
 
     this.mensagens.push({
-      texto: texto,
+      texto,
       tipo: 'usuario',
       horario: this.obterHorario()
     });
 
     this.mensagemAtual = '';
+    this.iaDigitando = true;
 
-    // resposta temporária da IA. depois vamos substituir isso pela Firebase Function.
+    // Temporariamente continua usando uma resposta simulada.
     setTimeout(() => {
       this.mensagens.push({
         texto: 'Entendi! Em breve vou conseguir responder sua pergunta usando a inteligência artificial do Impulso Jovem. 🤖',
         tipo: 'ia',
         horario: this.obterHorario()
       });
-    }, 500);
+
+      this.iaDigitando = false;
+    }, 1000);
   }
 
   obterHorario(): string {

@@ -1,0 +1,1014 @@
+/* =========================
+BASE
+========================= */
+
+ion-content {
+--background: #f8f9ff;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+/* =========================
+TOOLBAR
+========================= */
+
+ion-toolbar {
+
+--background: #040094;
+--color: #ffffff;
+
+min-height: 64px;
+
+ion-title {
+font-size: 18px;
+font-weight: 700;
+}
+
+ion-button,
+ion-back-button {
+--color: #ffffff;
+}
+}
+
+.save-button {
+font-weight: 600;
+text-transform: none;
+}
+
+/* =========================
+PÁGINA
+========================= */
+
+.curriculo-page {
+
+width: 100%;
+max-width: 1500px;
+
+margin: 0 auto;
+
+padding: 32px 35px 80px;
+}
+
+/* =========================
+CABEÇALHO
+========================= */
+
+.page-header {
+
+display: flex;
+align-items: center;
+
+gap: 16px;
+
+margin-bottom: 28px;
+}
+
+.header-icon {
+
+width: 58px;
+height: 58px;
+
+border-radius: 16px;
+
+background: #CECCFF;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-shrink: 0;
+}
+
+.header-icon ion-icon {
+
+font-size: 30px;
+
+color: #040094;
+}
+
+.header-text span {
+
+color: #6964FA;
+
+font-size: 11px;
+
+font-weight: 800;
+
+letter-spacing: 1.2px;
+}
+
+.header-text h1 {
+
+margin: 3px 0 4px;
+
+color: #1E293B;
+
+font-size: 28px;
+
+font-weight: 700;
+}
+
+.header-text p {
+
+margin: 0;
+
+color: #64748B;
+
+font-size: 14px;
+}
+
+/* =========================
+LAYOUT PRINCIPAL
+========================= */
+
+.editor-layout {
+
+display: grid;
+
+grid-template-columns:
+minmax(0, 1fr)
+minmax(390px, 0.8fr);
+
+gap: 28px;
+
+align-items: start;
+}
+
+/* =========================
+FORMULÁRIO
+========================= */
+
+.form-column {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 14px;
+}
+
+.form-section {
+
+background: #ffffff;
+
+border: 1px solid #E2E8F0;
+
+border-radius: 16px;
+
+padding: 22px;
+
+box-shadow: none;
+}
+
+/* =========================
+TÍTULO DA SEÇÃO
+========================= */
+
+.section-title {
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+margin-bottom: 22px;
+}
+
+.section-icon {
+
+width: 44px;
+height: 44px;
+
+border-radius: 12px;
+
+background: #CECCFF;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+flex-shrink: 0;
+}
+
+.section-icon ion-icon {
+
+color: #040094;
+
+font-size: 23px;
+}
+
+.section-title h2 {
+
+margin: 0;
+
+color: #1E293B;
+
+font-size: 17px;
+
+font-weight: 700;
+}
+
+.section-title p {
+
+margin: 3px 0 0;
+
+color: #64748B;
+
+font-size: 13px;
+
+line-height: 1.4;
+}
+
+/* =========================
+CAMPOS
+========================= */
+
+.field {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 7px;
+
+margin-bottom: 15px;
+}
+
+.field:last-child {
+
+margin-bottom: 0;
+}
+
+.field-row {
+
+display: grid;
+
+grid-template-columns: repeat(2, minmax(0, 1fr));
+
+gap: 14px;
+}
+
+.field ion-label {
+
+color: #1E293B;
+
+font-size: 13px;
+
+font-weight: 600;
+}
+
+.field small {
+
+color: #64748B;
+
+font-size: 11px;
+}
+
+/* =========================
+INPUTS
+========================= */
+
+ion-input,
+ion-textarea,
+ion-select {
+
+--background: #F8FAFC;
+
+--border-color: #E2E8F0;
+
+--border-radius: 10px;
+
+--highlight-color-focused: #040094;
+
+--padding-start: 13px;
+
+--padding-end: 13px;
+
+color: #1E293B;
+
+font-size: 14px;
+}
+
+/* =========================
+ITENS DINÂMICOS
+========================= */
+
+.list-item {
+
+padding: 16px;
+
+margin-bottom: 15px;
+
+background: #F8FAFC;
+
+border: 1px solid #E2E8F0;
+
+border-radius: 13px;
+}
+
+.list-item-header {
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+margin-bottom: 16px;
+}
+
+.list-item-header strong {
+
+flex: 1;
+
+color: #1E293B;
+
+font-size: 14px;
+
+font-weight: 700;
+}
+
+.item-number {
+
+width: 30px;
+height: 30px;
+
+border-radius: 9px;
+
+background: #CECCFF;
+
+color: #040094;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 12px;
+
+font-weight: 700;
+}
+
+.remove-button {
+
+width: 34px;
+height: 34px;
+
+border: none;
+
+border-radius: 9px;
+
+background: #FFF1F2;
+
+color: #DC2626;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+cursor: pointer;
+}
+
+.remove-button ion-icon {
+
+font-size: 18px;
+}
+
+/* =========================
+BOTÃO ADICIONAR
+========================= */
+
+.add-button {
+
+width: 100%;
+
+min-height: 44px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 7px;
+
+padding: 10px 15px;
+
+background: #ffffff;
+
+border: 1.5px dashed #6964FA;
+
+border-radius: 10px;
+
+color: #040094;
+
+font-size: 13px;
+
+font-weight: 650;
+
+cursor: pointer;
+
+transition: 0.2s ease;
+}
+
+.add-button:hover {
+
+background: #F5F4FF;
+}
+
+.add-button ion-icon {
+
+font-size: 19px;
+}
+
+/* =========================
+ÁREA DE SALVAR
+========================= */
+
+.save-area {
+
+padding: 5px 0 0;
+}
+
+.save-area p {
+
+margin: 0 0 12px;
+
+color: #64748B;
+
+text-align: center;
+
+font-size: 12px;
+}
+
+.main-save-button {
+
+--background: #040094;
+
+--background-hover: #02006e;
+
+--color: #ffffff;
+
+--border-radius: 11px;
+
+height: 48px;
+
+font-weight: 700;
+
+text-transform: none;
+}
+
+/* =========================
+PRÉ-VISUALIZAÇÃO
+========================= */
+
+.preview-column {
+
+position: sticky;
+
+top: 20px;
+
+min-width: 0;
+}
+
+.preview-heading {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 15px;
+
+margin-bottom: 14px;
+}
+
+.preview-heading span {
+
+color: #6964FA;
+
+font-size: 10px;
+
+font-weight: 800;
+
+letter-spacing: 1px;
+}
+
+.preview-heading h2 {
+
+margin: 3px 0 0;
+
+color: #1E293B;
+
+font-size: 19px;
+
+font-weight: 700;
+}
+
+.preview-status {
+
+display: flex;
+
+align-items: center;
+
+gap: 5px;
+
+padding: 7px 10px;
+
+background: #CECCFF;
+
+border-radius: 8px;
+
+color: #040094;
+
+font-size: 10px;
+
+font-weight: 600;
+
+white-space: nowrap;
+}
+
+.preview-status ion-icon {
+
+font-size: 15px;
+}
+
+/* =========================
+PAPEL DO CURRÍCULO
+========================= */
+
+.resume-paper {
+
+width: 100%;
+
+min-height: 800px;
+
+padding: 40px 38px;
+
+background: #ffffff;
+
+border: 1px solid #E2E8F0;
+
+border-radius: 4px;
+
+box-shadow:
+0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+CABEÇALHO DO CURRÍCULO
+========================= */
+
+.resume-header {
+
+padding-bottom: 20px;
+
+border-bottom: 2px solid #040094;
+}
+
+.resume-header h1 {
+
+margin: 0 0 7px;
+
+color: #1E293B;
+
+font-size: 27px;
+
+font-weight: 750;
+
+word-break: break-word;
+}
+
+.resume-contact {
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 10px 16px;
+}
+
+.resume-contact span {
+
+display: flex;
+
+align-items: center;
+
+gap: 4px;
+
+color: #64748B;
+
+font-size: 10px;
+
+word-break: break-word;
+}
+
+.resume-contact ion-icon {
+
+color: #040094;
+
+font-size: 13px;
+}
+
+/* =========================
+SEÇÕES DO CURRÍCULO
+========================= */
+
+.resume-section {
+
+margin-top: 22px;
+}
+
+.resume-section h3 {
+
+margin: 0 0 8px;
+
+color: #040094;
+
+font-size: 10px;
+
+font-weight: 800;
+
+text-transform: uppercase;
+
+letter-spacing: 0.8px;
+}
+
+.resume-section > p {
+
+margin: 0;
+
+color: #475569;
+
+font-size: 11px;
+
+line-height: 1.6;
+
+word-break: break-word;
+}
+
+/* =========================
+ENTRADAS DO CURRÍCULO
+========================= */
+
+.resume-entry {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 3px;
+}
+
+.resume-entry strong {
+
+color: #1E293B;
+
+font-size: 12px;
+
+font-weight: 700;
+
+word-break: break-word;
+}
+
+.resume-entry span {
+
+color: #475569;
+
+font-size: 10px;
+
+word-break: break-word;
+}
+
+.resume-entry small {
+
+color: #64748B;
+
+font-size: 9px;
+}
+
+.resume-entry p {
+
+margin: 4px 0 0;
+
+color: #64748B;
+
+font-size: 10px;
+
+line-height: 1.5;
+}
+
+/* =========================
+HABILIDADES
+========================= */
+
+.resume-tags {
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 6px;
+}
+
+.resume-tags span {
+
+padding: 5px 8px;
+
+background: #CECCFF;
+
+border-radius: 6px;
+
+color: #040094;
+
+font-size: 9px;
+
+font-weight: 600;
+
+word-break: break-word;
+}
+
+/* =========================
+ACESSIBILIDADE
+========================= */
+
+.accessibility-button {
+
+position: fixed;
+
+right: 22px;
+
+bottom: 25px;
+
+width: 58px;
+height: 58px;
+
+border: none;
+
+border-radius: 50%;
+
+background: #040094;
+
+color: #ffffff;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+box-shadow:
+0 6px 18px rgba(4, 0, 148, 0.28);
+
+z-index: 20;
+
+cursor: pointer;
+}
+
+.accessibility-button ion-icon {
+
+font-size: 29px;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+.curriculo-page {
+padding: 28px 25px 75px;
+}
+
+.editor-layout {
+grid-template-columns: 1fr;
+}
+
+.preview-column {
+position: static;
+}
+
+.resume-paper {
+max-width: 700px;
+
+margin: 0 auto;
+}
+
+}
+
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+ion-toolbar {
+min-height: 58px;
+}
+
+ion-title {
+
+font-size: 16px !important;
+
+}
+
+.save-button {
+font-size: 0;
+
+--padding-start: 8px;
+--padding-end: 8px;
+}
+
+.save-button ion-icon {
+margin: 0;
+
+font-size: 21px;
+}
+
+.curriculo-page {
+
+padding: 22px 14px 90px;
+
+}
+
+/* CABEÇALHO */
+
+.page-header {
+
+align-items: flex-start;
+
+margin-bottom: 20px;
+
+}
+
+.header-icon {
+
+width: 48px;
+height: 48px;
+
+border-radius: 13px;
+}
+
+.header-icon ion-icon {
+
+font-size: 25px;
+}
+
+.header-text h1 {
+font-size: 23px;
+}
+
+.header-text p {
+
+font-size: 12px;
+
+line-height: 1.5;
+
+}
+
+/* FORMULÁRIO */
+
+.form-section {
+
+padding: 17px;
+
+border-radius: 14px;
+
+}
+
+.section-title {
+align-items: flex-start;
+
+margin-bottom: 18px;
+}
+
+.section-icon {
+width: 40px;
+height: 40px;
+
+border-radius: 10px;
+}
+
+.section-icon ion-icon {
+
+font-size: 21px;
+}
+
+.section-title h2 {
+
+font-size: 16px;
+
+}
+
+.section-title p {
+font-size: 12px;
+}
+
+/* CAMPOS */
+
+.field-row {
+
+grid-template-columns: 1fr;
+
+gap: 0;
+}
+
+.field {
+
+margin-bottom: 14px;
+}
+
+/* ITENS */
+
+.list-item {
+
+padding: 13px;
+
+border-radius: 11px;
+
+}
+
+.list-item-header {
+margin-bottom: 14px;
+}
+
+/* PRÉVIA */
+
+.preview-heading {
+align-items: flex-start;
+
+flex-direction: column;
+gap: 8px;
+}
+
+.preview-status {
+align-self: flex-start;
+}
+
+.resume-paper {
+min-height: 0;
+padding: 27px 22px;
+border-radius: 3px;
+}
+
+.resume-header h1 {
+font-size: 23px;
+}
+
+.resume-contact {
+flex-direction: column;
+gap: 5px;
+}
+
+.resume-section {
+margin-top: 19px;
+}
+
+/* ACESSIBILIDADE */
+
+.accessibility-button {
+right: 16px;
+bottom: 18px;
+width: 52px;
+height: 52px;
+}
+
+.accessibility-button ion-icon {
+font-size: 26px;
+}
+
+}
+
+/* =========================
+CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 380px) {
+
+.curriculo-page {
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.form-section {
+padding: 14px;
+}
+
+.resume-paper {
+padding: 23px 17px;
+}
+
+.header-text h1 {
+font-size: 21px;
+}
+
+}

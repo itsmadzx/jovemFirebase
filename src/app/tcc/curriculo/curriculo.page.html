@@ -1,0 +1,486 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+```
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/home"></ion-back-button>
+</ion-buttons>
+
+<ion-title>Criar currículo</ion-title>
+
+<ion-buttons slot="end">
+  <ion-button class="save-button">
+    <ion-icon name="save-outline" slot="start"></ion-icon>
+    Salvar
+  </ion-button>
+</ion-buttons>
+```
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <main class="curriculo-page">
+
+```
+<!-- =========================
+     CABEÇALHO
+     ========================= -->
+
+<section class="page-header">
+
+  <div class="header-icon">
+    <ion-icon name="document-text-outline"></ion-icon>
+  </div>
+
+  <div class="header-text">
+    <span>MEU CURRÍCULO</span>
+
+    <h1>Crie seu currículo</h1>
+
+    <p>
+      Preencha suas informações e acompanhe
+      seu currículo tomando forma.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EDITOR
+     ========================= -->
+
+<div class="editor-layout">
+
+
+  <!-- =========================
+       FORMULÁRIO
+       ========================= -->
+
+  <section class="form-column">
+
+
+    <!-- DADOS PESSOAIS -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Dados pessoais</h2>
+          <p>Conte um pouco sobre você.</p>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <ion-label>Nome completo</ion-label>
+
+        <ion-input
+          fill="outline"
+          placeholder="Ex.: Maria Flor">
+        </ion-input>
+
+      </div>
+
+
+      <div class="field-row">
+
+        <div class="field">
+
+          <ion-label>E-mail</ion-label>
+
+          <ion-input
+            type="email"
+            fill="outline"
+            placeholder="seuemail@email.com">
+          </ion-input>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Telefone</ion-label>
+
+          <ion-input
+            type="tel"
+            fill="outline"
+            placeholder="(00) 00000-0000">
+          </ion-input>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- OBJETIVO -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="flag-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Objetivo profissional</h2>
+          <p>Qual oportunidade você está buscando?</p>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <ion-label>Objetivo</ion-label>
+
+        <ion-textarea
+          fill="outline"
+          rows="4"
+          placeholder="Ex.: Busco uma oportunidade de estágio na área de tecnologia...">
+        </ion-textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- SOBRE MIM -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Sobre mim</h2>
+          <p>Apresente suas principais características.</p>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <ion-label>Resumo profissional</ion-label>
+
+        <ion-textarea
+          fill="outline"
+          rows="5"
+          placeholder="Fale brevemente sobre você, seus interesses e seus objetivos...">
+        </ion-textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- FORMAÇÃO -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="school-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Formação</h2>
+          <p>Adicione sua formação acadêmica.</p>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <ion-label>Curso</ion-label>
+
+        <ion-input
+          fill="outline"
+          placeholder="Ex.: Técnico em Desenvolvimento de Sistemas">
+        </ion-input>
+
+      </div>
+
+
+      <div class="field-row">
+
+        <div class="field">
+
+          <ion-label>Instituição</ion-label>
+
+          <ion-input
+            fill="outline"
+            placeholder="Nome da instituição">
+          </ion-input>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Status</ion-label>
+
+          <ion-select
+            fill="outline"
+            placeholder="Selecione">
+
+            <ion-select-option value="cursando">
+              Cursando
+            </ion-select-option>
+
+            <ion-select-option value="concluido">
+              Concluído
+            </ion-select-option>
+
+          </ion-select>
+
+        </div>
+
+      </div>
+
+
+      <button class="add-button" type="button">
+
+        <ion-icon name="add-circle-outline"></ion-icon>
+
+        Adicionar formação
+
+      </button>
+
+    </div>
+
+
+    <!-- EXPERIÊNCIA -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Experiência profissional</h2>
+          <p>Essa seção é opcional.</p>
+        </div>
+
+      </div>
+
+
+      <!-- ITEM DE EXPERIÊNCIA -->
+
+      <div class="list-item">
+
+        <div class="list-item-header">
+
+          <div class="item-number">
+            1
+          </div>
+
+          <strong>Experiência profissional</strong>
+
+          <button
+            class="remove-button"
+            type="button"
+            aria-label="Remover experiência">
+
+            <ion-icon name="trash-outline"></ion-icon>
+
+          </button>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Cargo</ion-label>
+
+          <ion-input
+            fill="outline"
+            placeholder="Ex.: Jovem Aprendiz">
+          </ion-input>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Empresa</ion-label>
+
+          <ion-input
+            fill="outline"
+            placeholder="Nome da empresa">
+          </ion-input>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Descrição das atividades</ion-label>
+
+          <ion-textarea
+            fill="outline"
+            rows="4"
+            placeholder="Descreva suas principais atividades...">
+          </ion-textarea>
+
+        </div>
+
+      </div>
+
+
+      <button class="add-button" type="button">
+
+        <ion-icon name="add-circle-outline"></ion-icon>
+
+        Adicionar experiência
+
+      </button>
+
+    </div>
+
+
+    <!-- CURSOS -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="ribbon-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Cursos</h2>
+          <p>Adicione cursos que você realizou.</p>
+        </div>
+
+      </div>
+
+
+      <!-- ITEM DE CURSO -->
+
+      <div class="list-item">
+
+        <div class="list-item-header">
+
+          <div class="item-number">
+            1
+          </div>
+
+          <strong>Curso</strong>
+
+          <button
+            class="remove-button"
+            type="button"
+            aria-label="Remover curso">
+
+            <ion-icon name="trash-outline"></ion-icon>
+
+          </button>
+
+        </div>
+
+
+        <div class="field">
+
+          <ion-label>Nome do curso</ion-label>
+
+          <ion-input
+            fill="outline"
+            placeholder="Ex.: Introdução à Informática">
+          </ion-input>
+
+        </div>
+
+
+        <div class="field-row">
+
+          <div class="field">
+
+            <ion-label>Instituição</ion-label>
+
+            <ion-input
+              fill="outline"
+              placeholder="Instituição">
+            </ion-input>
+
+          </div>
+
+
+          <div class="field">
+
+            <ion-label>Carga horária</ion-label>
+
+            <ion-input
+              fill="outline"
+              placeholder="Ex.: 40 horas">
+            </ion-input>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button class="add-button" type="button">
+
+        <ion-icon name="add-circle-outline"></ion-icon>
+
+        Adicionar curso
+
+      </button>
+
+    </div>
+
+
+    <!-- HABILIDADES -->
+
+    <div class="form-section">
+
+      <div class="section-title">
+
+        <div class="section-icon">
+          <ion-icon name="construct-outline"></ion-icon>
+        </div>
+
+        <div>
+          <h2>Habilidades</h2>
+          <p>Mostre aquilo que você sabe fazer.</p>
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <ion-label>Habilidades</ion-label>
+
+        <ion-input
+          fill="outline"
+          placeholder="Ex.: Comunicação, Excel, HTML...">
+        </ion-input>
+
+        <small
+```

@@ -37,6 +37,14 @@ const routes: Routes = [
   {
     path: 'config',
     loadChildren: () => import('./tcc/config/config.module').then( m => m.ConfigPageModule)
+  },
+  {
+    path: 'curriculo',
+    loadChildren: () => import('./tcc/curriculo/curriculo.module').then( m => m.CurriculoPageModule)
+  },
+  {
+    path: 'chatbot',
+    loadChildren: () => import('./tcc/chatbot/chatbot.module').then( m => m.ChatbotPageModule)
   }
 
 ];

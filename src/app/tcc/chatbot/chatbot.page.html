@@ -1,13 +1,75 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>chatbot</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ChatBot</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">chatbot</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <main class="chatbot-page">
+    <section class="chat-header">
+      <div class="chat-icon">
+        <ion-icon name="sparkles-outline"></ion-icon>
+      </div>
+
+      <div class="chat-header-text">
+        <span>IMPULSO JOVEM</span>
+        <h1>Assistente de IA</h1>
+        <p>
+          Tire suas dúvidas e receba ajuda para
+          entrar no mercado de trabalho.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÁREA DO CHAT -->
+    <section class="chat-container">
+
+      <!-- MENSAGENS -->
+      <div class="messages">
+        <div
+          *ngFor="let mensagem of mensagens"
+          class="message"
+          [class.message-user]="mensagem.tipo === 'usuario'"
+          [class.message-ai]="mensagem.tipo === 'ia'">
+
+          <div class="message-icon" *ngIf="mensagem.tipo === 'ia'">
+            <ion-icon name="sparkles-outline"></ion-icon>
+          </div>
+
+          <div class="message-content">
+            <div class="message-bubble">
+              {{ mensagem.texto }}
+            </div>
+            <span class="message-time">{{ mensagem.horario }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAMPO DE MENSAGEM -->
+      <div class="message-input-area">
+        <ion-input
+          fill="outline"
+          placeholder="Digite sua mensagem..."
+          [(ngModel)]="mensagemAtual"
+          (keyup.enter)="enviarMensagem()">
+        </ion-input>
+
+        <ion-button
+          class="send-button"
+          type="button"
+          (click)="enviarMensagem()"
+          [disabled]="!mensagemAtual.trim()">
+          <ion-icon name="send-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ACESSIBILIDADE -->
+  <button class="accessibility-button" type="button" aria-label="Acessibilidade">
+    <ion-icon name="accessibility-outline"></ion-icon>
+  </button>
 </ion-content>

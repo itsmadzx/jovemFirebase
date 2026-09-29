@@ -1,4 +1,26 @@
+:host {
+  color-scheme: light;
+}
 
+ion-content {
+  --background: #f8fafc;
+  --color: #1f2937;
+}
+
+ion-toolbar {
+  --background: #040094;
+  --color: #1f2937;
+}
+
+ion-back-button {
+  --color: #ffffff;
+}
+
+ion-title {
+  color: #ffffff;
+}
+
+/* PÁGINA */
 .chatbot-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -30,7 +52,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #6366f1;
+  color: #4f46e5;
 }
 
 .chat-header-text h1 {
@@ -52,8 +74,8 @@
   flex-direction: column;
   height: calc(100vh - 220px);
   min-height: 500px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid #9c99ff;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
@@ -109,7 +131,7 @@
 .message-bubble {
   padding: 12px 16px;
   border-radius: 16px;
-  background: #fff;
+  background: #ffffff;
   color: #374151;
   font-size: 14px;
   line-height: 1.5;
@@ -118,7 +140,7 @@
 
 .message-user .message-bubble {
   background: #4f46e5;
-  color: #fff;
+  color: #ffffff;
   border: none;
 }
 
@@ -133,12 +155,17 @@
   align-items: center;
   gap: 10px;
   padding: 16px;
-  background: #fff;
+  background: #ffffff;
   border-top: 1px solid #e5e7eb;
 }
 
 .message-input-area ion-input {
   flex: 1;
+  --background: #ffffff;
+  --color: #1f2937;
+  --placeholder-color: #9ca3af;
+  --border-color: #9c99ff;
+  --highlight-color-focused: #4f46e5;
   --padding-start: 14px;
   --padding-end: 14px;
 }
@@ -160,7 +187,7 @@
   border: none;
   border-radius: 50%;
   background: #4f46e5;
-  color: #fff;
+  color: #ffffff;
   font-size: 22px;
   cursor: pointer;
   z-index: 10;

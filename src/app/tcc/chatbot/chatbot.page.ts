@@ -18,7 +18,7 @@ export class ChatbotPage {
 
   mensagens: Mensagem[] = [
     {
-      texto: 'Olá! 👋 Eu sou o assistente do Impulso Jovem. Como posso te ajudar hoje?',
+      texto: 'Olá! 👋 Eu sou o Estagiário, assistente de IA do Impulso Jovem. Como posso te ajudar hoje?',
       tipo: 'ia',
       horario: this.obterHorario()
     }
@@ -39,8 +39,7 @@ export class ChatbotPage {
 
     this.mensagemAtual = '';
 
-    // Resposta temporária da IA.
-    // Depois vamos substituir isso pela Firebase Function.
+    // resposta temporária da IA. depois vamos substituir isso pela Firebase Function.
     setTimeout(() => {
       this.mensagens.push({
         texto: 'Entendi! Em breve vou conseguir responder sua pergunta usando a inteligência artificial do Impulso Jovem. 🤖',

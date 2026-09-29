@@ -1,24 +1,24 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
 
-<ion-buttons slot="start">
-  <ion-back-button defaultHref="/home"></ion-back-button>
-</ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
 
-<ion-title>Criar currículo</ion-title>
+    <ion-title>Criar currículo</ion-title>
 
-<ion-buttons slot="end">
-  <ion-button
-    class="save-button"
-    type="button"
-    (click)="salvarCurriculo()">
+    <ion-buttons slot="end">
+      <ion-button
+        class="save-button"
+        type="button"
+        (click)="salvarCurriculo()">
 
-    <ion-icon name="save-outline" slot="start"></ion-icon>
+        <ion-icon name="save-outline" slot="start"></ion-icon>
 
-    Salvar
+        Salvar
 
-  </ion-button>
-</ion-buttons>
+      </ion-button>
+    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
@@ -26,236 +26,172 @@
 <ion-content>
 
   <main class="curriculo-page">
-<!-- =========================
-     CABEÇALHO
-     ========================= -->
 
-<section class="page-header">
+    <!-- =========================
+         CABEÇALHO
+         ========================= -->
 
-  <div class="header-icon">
-    <ion-icon name="document-text-outline"></ion-icon>
-  </div>
+    <section class="page-header">
 
-  <div class="header-text">
+      <div class="header-icon">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </div>
 
-    <span>MEU CURRÍCULO</span>
+      <div class="header-text">
 
-    <h1>Crie seu currículo</h1>
+        <span>MEU CURRÍCULO</span>
 
-    <p>
-      Preencha suas informações e acompanhe
-      seu currículo tomando forma.
-    </p>
+        <h1>Crie seu currículo</h1>
 
-  </div>
-
-</section>
-
-<form [formGroup]="curriculoForm" class="editor-layout">
-
-  <section class="form-column">
-
-  <!--dados pessoais-->
-    <div class="form-section">  
-      <div class="section-title">
-        <div class="section-icon">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-
-        <div>
-          <h2>Dados pessoais</h2>
-          <p>
-            Conte um pouco sobre você.
-          </p>
-        </div>
+        <p>
+          Preencha suas informações e acompanhe
+          seu currículo tomando forma.
+        </p>
 
       </div>
 
-      <div class="field">
-        <ion-label>Nome completo</ion-label>
-        <ion-input fill="outline" placeholder="Ex.: Maria Flor" formControlName="nome">
-        </ion-input>
-      </div>
-
-      <div class="field-row">
-        <div class="field">
-          <ion-label>E-mail</ion-label>
-          <ion-input  type="email" fill="outline" placeholder="seuemail@email.com" formControlName="email">
-          </ion-input>
-        </div>
+    </section>
 
 
-        <div class="field">
-          <ion-label>Telefone</ion-label>
-          <ion-input type="tel" fill="outline" placeholder="(00) 00000-0000" formControlName="telefone">
-          </ion-input>
-        </div>
+    <form [formGroup]="curriculoForm" class="editor-layout">
 
-      </div>
-    </div>
+      <section class="form-column">
 
 
-    <!--OBJETIVO-->
-    <div class="form-section">
-      <div class="section-title">
-        <div class="section-icon">
-          <ion-icon name="flag-outline"></ion-icon>
-        </div>
+        <!-- =========================
+             DADOS PESSOAIS
+             ========================= -->
 
-        <div>
-          <h2>Objetivo profissional</h2>
-          <p>
-            Qual oportunidade você está buscando?
-          </p>
+        <div class="form-section">
 
-        </div>
+          <div class="section-title">
 
-      </div>
-
-
-      <div class="field">
-
-        <ion-label>Objetivo</ion-label>
-
-        <ion-textarea
-          fill="outline"
-          rows="4"
-          placeholder="Ex.: Busco uma oportunidade de estágio na área de tecnologia..."
-          formControlName="objetivo">
-        </ion-textarea>
-
-      </div>
-
-    </div>
-
-    <!--SOBRE MIM-->
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-        </div>
-
-        <div>
-
-          <h2>Sobre mim</h2>
-
-          <p>
-            Apresente suas principais características.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="field">
-
-        <ion-label>Resumo profissional</ion-label>
-
-        <ion-textarea fill="outline" rows="5" 
-          placeholder="Fale brevemente sobre você, seus interesses e seus objetivos..."
-          formControlName="resumo">
-        </ion-textarea>
-      </div>
-    </div>
-
-    <!--FORMAÇÃO-->
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="school-outline"></ion-icon>
-        </div>
-
-        <div>
-          <h2>Formação</h2>
-          <p>
-            Adicione sua formação acadêmica.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- LISTA DE FORMAÇÕES -->
-
-      <div formArrayName="formacoes">
-
-        <div
-          class="list-item"
-          *ngFor="let formacao of formacoes.controls; let i = index"
-          [formGroupName]="i">
-
-          <div class="list-item-header">
-
-            <div class="item-number">
-              {{ i + 1 }}
+            <div class="section-icon">
+              <ion-icon name="person-outline"></ion-icon>
             </div>
 
-            <strong>Formação</strong>
+            <div>
+              <h2>Dados pessoais</h2>
 
-            <button
-              class="remove-button"
-              type="button"
-              aria-label="Remover formação"
-              (click)="removerFormacao(i)">
-
-              <ion-icon name="trash-outline"></ion-icon>
-
-            </button>
+              <p>
+                Conte um pouco sobre você.
+              </p>
+            </div>
 
           </div>
 
 
           <div class="field">
 
-            <ion-label>Curso</ion-label>
+            <ion-label>Nome completo</ion-label>
 
             <ion-input
               fill="outline"
-              placeholder="Ex.: Técnico em Desenvolvimento de Sistemas"
-              formControlName="curso">
+              placeholder="Ex.: Maria Flor"
+              formControlName="nome">
             </ion-input>
+
+            <small
+              class="error-message"
+              *ngIf="
+                curriculoForm.get('nome')?.touched &&
+                curriculoForm.get('nome')?.hasError('required')
+              ">
+
+              O nome é obrigatório.
+
+            </small>
+
+            <small
+              class="error-message"
+              *ngIf="
+                curriculoForm.get('nome')?.touched &&
+                curriculoForm.get('nome')?.hasError('minlength')
+              ">
+
+              Digite seu nome completo.
+
+            </small>
 
           </div>
 
 
           <div class="field-row">
 
+            <!-- E-MAIL -->
+
             <div class="field">
 
-              <ion-label>Instituição</ion-label>
+              <ion-label>E-mail</ion-label>
 
               <ion-input
+                type="email"
                 fill="outline"
-                placeholder="Nome da instituição"
-                formControlName="instituicao">
+                placeholder="seuemail@email.com"
+                formControlName="email">
               </ion-input>
+
+              <small
+                class="error-message"
+                *ngIf="
+                  curriculoForm.get('email')?.touched &&
+                  curriculoForm.get('email')?.hasError('required')
+                ">
+
+                O e-mail é obrigatório.
+
+              </small>
+
+              <small
+                class="error-message"
+                *ngIf="
+                  curriculoForm.get('email')?.touched &&
+                  curriculoForm.get('email')?.hasError('email')
+                ">
+
+                Digite um endereço de e-mail válido.
+
+              </small>
 
             </div>
 
+
+            <!-- TELEFONE -->
 
             <div class="field">
 
-              <ion-label>Status</ion-label>
+              <ion-label>Telefone</ion-label>
 
-              <ion-select
+              <ion-input
+                type="tel"
                 fill="outline"
-                placeholder="Selecione"
-                formControlName="status">
+                placeholder="(00) 00000-0000"
+                maxlength="15"
+                formControlName="telefone"
+                (ionInput)="formatarTelefone($event)">
+              </ion-input>
 
-                <ion-select-option value="cursando">
-                  Cursando
-                </ion-select-option>
+              <small
+                class="error-message"
+                *ngIf="
+                  curriculoForm.get('telefone')?.touched &&
+                  curriculoForm.get('telefone')?.hasError('required')
+                ">
 
-                <ion-select-option value="concluido">
-                  Concluído
-                </ion-select-option>
+                O telefone é obrigatório.
 
-              </ion-select>
+              </small>
+
+              <small
+                class="error-message"
+                *ngIf="
+                  curriculoForm.get('telefone')?.touched &&
+                  curriculoForm.get('telefone')?.hasError('pattern')
+                ">
+
+                Digite um telefone válido.
+
+              </small>
 
             </div>
 
@@ -263,734 +199,967 @@
 
         </div>
 
-      </div>
 
+        <!-- =========================
+             OBJETIVO
+             ========================= -->
 
-      <!-- NENHUMA FORMAÇÃO -->
+        <div class="form-section">
 
-      <p
-        class="empty-list"
-        *ngIf="formacoes.length === 0">
+          <div class="section-title">
 
-        Nenhuma formação adicionada ainda.
-
-      </p>
-
-
-      <button
-        class="add-button"
-        type="button"
-        (click)="adicionarFormacao()">
-
-        <ion-icon name="add-circle-outline"></ion-icon>
-
-        Adicionar formação
-
-      </button>
-
-    </div>
-
-
-    <!-- EXPERIÊNCIA-->
-
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="briefcase-outline"></ion-icon>
-        </div>
-
-        <div>
-
-          <h2>Experiência profissional</h2>
-
-          <p>
-            Essa seção é opcional.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- LISTA DE EXPERIÊNCIAS -->
-
-      <div formArrayName="experiencias">
-
-        <div
-          class="list-item"
-          *ngFor="let experiencia of experiencias.controls; let i = index"
-          [formGroupName]="i">
-
-          <div class="list-item-header">
-
-            <div class="item-number">
-              {{ i + 1 }}
+            <div class="section-icon">
+              <ion-icon name="flag-outline"></ion-icon>
             </div>
 
-            <strong>
-              Experiência profissional
-            </strong>
+            <div>
+              <h2>Objetivo profissional</h2>
 
-            <button
-              class="remove-button"
-              type="button"
-              aria-label="Remover experiência"
-              (click)="removerExperiencia(i)">
-
-              <ion-icon name="trash-outline"></ion-icon>
-
-            </button>
+              <p>
+                Qual oportunidade você está buscando?
+              </p>
+            </div>
 
           </div>
 
 
           <div class="field">
 
-            <ion-label>Cargo</ion-label>
-
-            <ion-input
-              fill="outline"
-              placeholder="Ex.: Jovem Aprendiz"
-              formControlName="cargo">
-            </ion-input>
-
-          </div>
-
-
-          <div class="field">
-
-            <ion-label>Empresa</ion-label>
-
-            <ion-input
-              fill="outline"
-              placeholder="Nome da empresa"
-              formControlName="empresa">
-            </ion-input>
-
-          </div>
-
-
-          <div class="field">
-
-            <ion-label>
-              Descrição das atividades
-            </ion-label>
+            <ion-label>Objetivo</ion-label>
 
             <ion-textarea
               fill="outline"
               rows="4"
-              placeholder="Descreva suas principais atividades..."
-              formControlName="descricao">
+              placeholder="Ex.: Busco uma oportunidade de estágio na área de tecnologia..."
+              formControlName="objetivo">
             </ion-textarea>
 
           </div>
 
         </div>
 
-      </div>
 
+        <!-- =========================
+             SOBRE MIM
+             ========================= -->
 
-      <!-- NENHUMA EXPERIÊNCIA -->
+        <div class="form-section">
 
-      <p
-        class="empty-list"
-        *ngIf="experiencias.length === 0">
+          <div class="section-title">
 
-        Nenhuma experiência adicionada.
-        Essa seção é opcional.
-
-      </p>
-
-
-      <button
-        class="add-button"
-        type="button"
-        (click)="adicionarExperiencia()">
-
-        <ion-icon name="add-circle-outline"></ion-icon>
-
-        Adicionar experiência
-
-      </button>
-
-    </div>
-
-
-    <!-- =========================
-         CURSOS
-         ========================= -->
-
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="ribbon-outline"></ion-icon>
-        </div>
-
-        <div>
-
-          <h2>Cursos</h2>
-
-          <p>
-            Adicione cursos que você realizou.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- LISTA DE CURSOS -->
-
-      <div formArrayName="cursos">
-
-        <div
-          class="list-item"
-          *ngFor="let curso of cursos.controls; let i = index"
-          [formGroupName]="i">
-
-          <div class="list-item-header">
-
-            <div class="item-number">
-              {{ i + 1 }}
+            <div class="section-icon">
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
             </div>
 
-            <strong>Curso</strong>
+            <div>
 
-            <button
-              class="remove-button"
-              type="button"
-              aria-label="Remover curso"
-              (click)="removerCurso(i)">
+              <h2>Sobre mim</h2>
 
-              <ion-icon name="trash-outline"></ion-icon>
+              <p>
+                Apresente suas principais características.
+              </p>
 
-            </button>
+            </div>
 
           </div>
 
 
           <div class="field">
 
-            <ion-label>Nome do curso</ion-label>
+            <ion-label>Resumo profissional</ion-label>
+
+            <ion-textarea
+              fill="outline"
+              rows="5"
+              placeholder="Fale brevemente sobre você, seus interesses e seus objetivos..."
+              formControlName="resumo">
+            </ion-textarea>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             FORMAÇÃO
+             ========================= -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <div class="section-icon">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <div>
+              <h2>Formação</h2>
+
+              <p>
+                Adicione sua formação acadêmica.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- LISTA DE FORMAÇÕES -->
+
+          <div formArrayName="formacoes">
+
+            <div
+              class="list-item"
+              *ngFor="let formacao of formacoes.controls; let i = index"
+              [formGroupName]="i">
+
+              <div class="list-item-header">
+
+                <div class="item-number">
+                  {{ i + 1 }}
+                </div>
+
+                <strong>Formação</strong>
+
+                <button
+                  class="remove-button"
+                  type="button"
+                  aria-label="Remover formação"
+                  (click)="removerFormacao(i)">
+
+                  <ion-icon name="trash-outline"></ion-icon>
+
+                </button>
+
+              </div>
+
+
+              <div class="field">
+
+                <ion-label>Curso</ion-label>
+
+                <ion-input
+                  fill="outline"
+                  placeholder="Ex.: Técnico em Desenvolvimento de Sistemas"
+                  formControlName="curso">
+                </ion-input>
+
+              </div>
+
+
+              <div class="field-row">
+
+                <div class="field">
+
+                  <ion-label>Instituição</ion-label>
+
+                  <ion-input
+                    fill="outline"
+                    placeholder="Nome da instituição"
+                    formControlName="instituicao">
+                  </ion-input>
+
+                </div>
+
+
+                <div class="field">
+
+                  <ion-label>Status</ion-label>
+
+                  <ion-select
+                    fill="outline"
+                    interface="popover"
+                    placeholder="Selecione"
+                    formControlName="status">
+
+                    <ion-select-option value="cursando">
+                      Cursando
+                    </ion-select-option>
+
+                    <ion-select-option value="concluido">
+                      Concluído
+                    </ion-select-option>
+
+                  </ion-select>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- NENHUMA FORMAÇÃO -->
+
+          <p
+            class="empty-list"
+            *ngIf="formacoes.length === 0">
+
+            Nenhuma formação adicionada ainda.
+
+          </p>
+
+
+          <button
+            class="add-button"
+            type="button"
+            (click)="adicionarFormacao()">
+
+            <ion-icon name="add-circle-outline"></ion-icon>
+
+            Adicionar formação
+
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             EXPERIÊNCIA
+             ========================= -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <div class="section-icon">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <div>
+
+              <h2>Experiência profissional</h2>
+
+              <p>
+                Essa seção é opcional.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- LISTA DE EXPERIÊNCIAS -->
+
+          <div formArrayName="experiencias">
+
+            <div
+              class="list-item"
+              *ngFor="let experiencia of experiencias.controls; let i = index"
+              [formGroupName]="i">
+
+              <div class="list-item-header">
+
+                <div class="item-number">
+                  {{ i + 1 }}
+                </div>
+
+                <strong>
+                  Experiência profissional
+                </strong>
+
+                <button
+                  class="remove-button"
+                  type="button"
+                  aria-label="Remover experiência"
+                  (click)="removerExperiencia(i)">
+
+                  <ion-icon name="trash-outline"></ion-icon>
+
+                </button>
+
+              </div>
+
+
+              <div class="field">
+
+                <ion-label>Cargo</ion-label>
+
+                <ion-input
+                  fill="outline"
+                  placeholder="Ex.: Jovem Aprendiz"
+                  formControlName="cargo">
+                </ion-input>
+
+              </div>
+
+
+              <div class="field">
+
+                <ion-label>Empresa</ion-label>
+
+                <ion-input
+                  fill="outline"
+                  placeholder="Nome da empresa"
+                  formControlName="empresa">
+                </ion-input>
+
+              </div>
+
+
+              <div class="field">
+
+                <ion-label>
+                  Descrição das atividades
+                </ion-label>
+
+                <ion-textarea
+                  fill="outline"
+                  rows="4"
+                  placeholder="Descreva suas principais atividades..."
+                  formControlName="descricao">
+                </ion-textarea>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- NENHUMA EXPERIÊNCIA -->
+
+          <p
+            class="empty-list"
+            *ngIf="experiencias.length === 0">
+
+            Nenhuma experiência adicionada.
+            Essa seção é opcional.
+
+          </p>
+
+
+          <button
+            class="add-button"
+            type="button"
+            (click)="adicionarExperiencia()">
+
+            <ion-icon name="add-circle-outline"></ion-icon>
+
+            Adicionar experiência
+
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             CURSOS
+             ========================= -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <div class="section-icon">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+
+            <div>
+
+              <h2>Cursos</h2>
+
+              <p>
+                Adicione cursos que você realizou.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- LISTA DE CURSOS -->
+
+          <div formArrayName="cursos">
+
+            <div
+              class="list-item"
+              *ngFor="let curso of cursos.controls; let i = index"
+              [formGroupName]="i">
+
+              <div class="list-item-header">
+
+                <div class="item-number">
+                  {{ i + 1 }}
+                </div>
+
+                <strong>Curso</strong>
+
+                <button
+                  class="remove-button"
+                  type="button"
+                  aria-label="Remover curso"
+                  (click)="removerCurso(i)">
+
+                  <ion-icon name="trash-outline"></ion-icon>
+
+                </button>
+
+              </div>
+
+
+              <div class="field">
+
+                <ion-label>Nome do curso</ion-label>
+
+                <ion-input
+                  fill="outline"
+                  placeholder="Ex.: Introdução à Informática"
+                  formControlName="nome">
+                </ion-input>
+
+              </div>
+
+
+              <div class="field-row">
+
+                <div class="field">
+
+                  <ion-label>Instituição</ion-label>
+
+                  <ion-input
+                    fill="outline"
+                    placeholder="Instituição"
+                    formControlName="instituicao">
+                  </ion-input>
+
+                </div>
+
+
+                <div class="field">
+
+                  <ion-label>Carga horária</ion-label>
+
+                  <ion-input
+                    fill="outline"
+                    placeholder="Ex.: 40 horas"
+                    formControlName="cargaHoraria">
+                  </ion-input>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- NENHUM CURSO -->
+
+          <p
+            class="empty-list"
+            *ngIf="cursos.length === 0">
+
+            Nenhum curso adicionado ainda.
+
+          </p>
+
+
+          <button
+            class="add-button"
+            type="button"
+            (click)="adicionarCurso()">
+
+            <ion-icon name="add-circle-outline"></ion-icon>
+
+            Adicionar curso
+
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             HABILIDADES
+             ========================= -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <div class="section-icon">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+
+            <div>
+
+              <h2>Habilidades</h2>
+
+              <p>
+                Mostre aquilo que você sabe fazer.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <ion-label>Habilidades</ion-label>
 
             <ion-input
               fill="outline"
-              placeholder="Ex.: Introdução à Informática"
-              formControlName="nome">
+              placeholder="Ex.: Comunicação, Excel, HTML..."
+              formControlName="habilidades">
             </ion-input>
 
-          </div>
-
-
-          <div class="field-row">
-
-            <div class="field">
-
-              <ion-label>Instituição</ion-label>
-
-              <ion-input
-                fill="outline"
-                placeholder="Instituição"
-                formControlName="instituicao">
-              </ion-input>
-
-            </div>
-
-
-            <div class="field">
-
-              <ion-label>Carga horária</ion-label>
-
-              <ion-input
-                fill="outline"
-                placeholder="Ex.: 40 horas"
-                formControlName="cargaHoraria">
-              </ion-input>
-
-            </div>
+            <small>
+              Separe as habilidades por vírgula.
+            </small>
 
           </div>
 
         </div>
 
-      </div>
 
+        <!-- =========================
+             IDIOMAS
+             ========================= -->
 
-      <!-- NENHUM CURSO -->
+        <div class="form-section">
 
-      <p
-        class="empty-list"
-        *ngIf="cursos.length === 0">
+          <div class="section-title">
 
-        Nenhum curso adicionado ainda.
-
-      </p>
-
-
-      <button
-        class="add-button"
-        type="button"
-        (click)="adicionarCurso()">
-
-        <ion-icon name="add-circle-outline"></ion-icon>
-
-        Adicionar curso
-
-      </button>
-
-    </div>
-
-
-    <!-- =========================
-         HABILIDADES
-         ========================= -->
-
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="construct-outline"></ion-icon>
-        </div>
-
-        <div>
-
-          <h2>Habilidades</h2>
-
-          <p>
-            Mostre aquilo que você sabe fazer.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="field">
-
-        <ion-label>Habilidades</ion-label>
-
-        <ion-input
-          fill="outline"
-          placeholder="Ex.: Comunicação, Excel, HTML..."
-          formControlName="habilidades">
-        </ion-input>
-
-        <small>
-          Separe as habilidades por vírgula.
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         IDIOMAS
-         ========================= -->
-
-    <div class="form-section">
-
-      <div class="section-title">
-
-        <div class="section-icon">
-          <ion-icon name="language-outline"></ion-icon>
-        </div>
-
-        <div>
-
-          <h2>Idiomas</h2>
-
-          <p>
-            Informe os idiomas que você conhece.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- LISTA DE IDIOMAS -->
-
-      <div formArrayName="idiomas">
-
-        <div
-          class="list-item"
-          *ngFor="let idioma of idiomas.controls; let i = index"
-          [formGroupName]="i">
-
-          <div class="list-item-header">
-
-            <div class="item-number">
-              {{ i + 1 }}
+            <div class="section-icon">
+              <ion-icon name="language-outline"></ion-icon>
             </div>
 
-            <strong>Idioma</strong>
+            <div>
 
-            <button
-              class="remove-button"
-              type="button"
-              aria-label="Remover idioma"
-              (click)="removerIdioma(i)">
+              <h2>Idiomas</h2>
 
-              <ion-icon name="trash-outline"></ion-icon>
+              <p>
+                Informe os idiomas que você conhece.
+              </p>
 
-            </button>
+            </div>
 
           </div>
 
 
-          <div class="field-row">
+          <!-- LISTA DE IDIOMAS -->
 
-            <div class="field">
+          <div formArrayName="idiomas">
 
-              <ion-label>Idioma</ion-label>
+            <div
+              class="list-item"
+              *ngFor="let idioma of idiomas.controls; let i = index"
+              [formGroupName]="i">
 
-              <ion-input
-                fill="outline"
-                placeholder="Ex.: Inglês"
-                formControlName="idioma">
-              </ion-input>
+              <div class="list-item-header">
+
+                <div class="item-number">
+                  {{ i + 1 }}
+                </div>
+
+                <strong>Idioma</strong>
+
+                <button
+                  class="remove-button"
+                  type="button"
+                  aria-label="Remover idioma"
+                  (click)="removerIdioma(i)">
+
+                  <ion-icon name="trash-outline"></ion-icon>
+
+                </button>
+
+              </div>
+
+
+              <div class="field-row">
+
+                <div class="field">
+
+                  <ion-label>Idioma</ion-label>
+
+                  <ion-input
+                    fill="outline"
+                    placeholder="Ex.: Inglês"
+                    formControlName="idioma">
+                  </ion-input>
+
+                </div>
+
+
+                <div class="field">
+
+                  <ion-label>Nível</ion-label>
+
+                  <ion-select
+                    fill="outline"
+                    interface="popover"
+                    placeholder="Selecione"
+                    formControlName="nivel">
+
+                    <ion-select-option value="basico">
+                      Básico
+                    </ion-select-option>
+
+                    <ion-select-option value="intermediario">
+                      Intermediário
+                    </ion-select-option>
+
+                    <ion-select-option value="avancado">
+                      Avançado
+                    </ion-select-option>
+
+                    <ion-select-option value="fluente">
+                      Fluente
+                    </ion-select-option>
+
+                  </ion-select>
+
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="field">
-              <ion-label>Nível</ion-label>
-              <ion-select fill="outline" placeholder="Selecione" formControlName="nivel">
-                <ion-select-option value="basico"> Básico </ion-select-option>
-                <ion-select-option value="intermediario"> Intermediário </ion-select-option>
-                <ion-select-option value="avancado"> Avançado </ion-select-option>
-                <ion-select-option value="fluente"> Fluente </ion-select-option>
-              </ion-select>
-            </div>
           </div>
-        </div>
-      </div>
 
 
-      <!-- NENHUM IDIOMA -->
-
-      <p
-        class="empty-list"
-        *ngIf="idiomas.length === 0">
-
-        Nenhum idioma adicionado ainda.
-
-      </p>
-
-
-      <button
-        class="add-button"
-        type="button"
-        (click)="adicionarIdioma()">
-
-        <ion-icon name="add-circle-outline"></ion-icon>
-
-        Adicionar idioma
-
-      </button>
-
-    </div>
-
-
-    <!-- =========================
-         SALVAR
-         ========================= -->
-
-    <div class="save-area">
-
-      <p>
-        Você poderá editar seu currículo novamente depois de salvá-lo.
-      </p>
-
-      <ion-button
-        expand="block"
-        class="main-save-button"
-        type="button"
-        (click)="salvarCurriculo()">
-
-        <ion-icon
-          name="checkmark-circle-outline"
-          slot="start">
-        </ion-icon>
-
-        Salvar currículo
-
-      </ion-button>
-
-    </div>
-
-
-  </section>
-
-
-  <!-- =========================
-       PRÉ-VISUALIZAÇÃO
-       ========================= -->
-
-  <aside class="preview-column">
-
-    <div class="preview-heading">
-
-      <div>
-
-        <span>PRÉ-VISUALIZAÇÃO</span>
-
-        <h2>Seu currículo</h2>
-
-      </div>
-
-      <div class="preview-status">
-
-        <ion-icon name="eye-outline"></ion-icon>
-
-        Visualização
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         CURRÍCULO
-         ========================= -->
-
-    <div class="resume-paper">
-
-
-      <!-- CABEÇALHO -->
-
-      <header class="resume-header">
-
-        <h1>
-          {{ curriculoForm.get('nome')?.value || 'Seu Nome' }}
-        </h1>
-
-
-        <div class="resume-contact">
-
-          <span>
-
-            <ion-icon name="mail-outline"></ion-icon>
-
-            {{ curriculoForm.get('email')?.value || 'seuemail@email.com' }}
-
-          </span>
-
-
-          <span>
-
-            <ion-icon name="call-outline"></ion-icon>
-
-            {{ curriculoForm.get('telefone')?.value || '(00) 00000-0000' }}
-
-          </span>
-
-        </div>
-
-      </header>
-
-
-      <!-- OBJETIVO -->
-
-      <section
-        class="resume-section"
-        *ngIf="curriculoForm.get('objetivo')?.value">
-
-        <h3>Objetivo profissional</h3>
-
-        <p>
-          {{ curriculoForm.get('objetivo')?.value }}
-        </p>
-
-      </section>
-
-
-      <!-- SOBRE -->
-
-      <section
-        class="resume-section"
-        *ngIf="curriculoForm.get('resumo')?.value">
-
-        <h3>Sobre mim</h3>
-
-        <p>
-          {{ curriculoForm.get('resumo')?.value }}
-        </p>
-
-      </section>
-
-
-      <!-- FORMAÇÃO -->
-
-      <section
-        class="resume-section"
-        *ngIf="formacoes.length > 0">
-
-        <h3>Formação</h3>
-
-
-        <div
-          class="resume-entry"
-          *ngFor="let formacao of formacoes.controls">
-
-          <strong>
-            {{ formacao.get('curso')?.value || 'Seu curso' }}
-          </strong>
-
-          <span>
-            {{ formacao.get('instituicao')?.value || 'Instituição' }}
-          </span>
-
-          <small
-            *ngIf="formacao.get('status')?.value">
-
-            {{
-              formacao.get('status')?.value === 'cursando'
-                ? 'Cursando'
-                : 'Concluído'
-            }}
-
-          </small>
-
-        </div>
-
-      </section>
-
-
-      <!-- EXPERIÊNCIA -->
-
-      <section
-        class="resume-section"
-        *ngIf="experiencias.length > 0">
-
-        <h3>Experiência profissional</h3>
-
-
-        <div
-          class="resume-entry"
-          *ngFor="let experiencia of experiencias.controls">
-
-          <strong>
-            {{ experiencia.get('cargo')?.value || 'Cargo' }}
-          </strong>
-
-          <span>
-            {{ experiencia.get('empresa')?.value || 'Nome da empresa' }}
-          </span>
+          <!-- NENHUM IDIOMA -->
 
           <p
-            *ngIf="experiencia.get('descricao')?.value">
+            class="empty-list"
+            *ngIf="idiomas.length === 0">
 
-            {{ experiencia.get('descricao')?.value }}
+            Nenhum idioma adicionado ainda.
 
           </p>
 
+
+          <button
+            class="add-button"
+            type="button"
+            (click)="adicionarIdioma()">
+
+            <ion-icon name="add-circle-outline"></ion-icon>
+
+            Adicionar idioma
+
+          </button>
+
         </div>
+
+
+        <!-- =========================
+             SALVAR
+             ========================= -->
+
+        <div class="save-area">
+
+          <p>
+            Você poderá editar seu currículo novamente depois de salvá-lo.
+          </p>
+
+          <ion-button
+            expand="block"
+            class="main-save-button"
+            type="button"
+            (click)="salvarCurriculo()">
+
+            <ion-icon
+              name="checkmark-circle-outline"
+              slot="start">
+            </ion-icon>
+
+            Salvar currículo
+
+          </ion-button>
+
+        </div>
+
 
       </section>
 
 
-      <!-- CURSOS -->
+      <!-- =========================
+           PRÉ-VISUALIZAÇÃO
+           ========================= -->
 
-      <section
-        class="resume-section"
-        *ngIf="cursos.length > 0">
+      <aside class="preview-column">
 
-        <h3>Cursos</h3>
+        <div class="preview-heading">
 
+          <div>
 
-        <div
-          class="resume-entry"
-          *ngFor="let curso of cursos.controls">
+            <span>PRÉ-VISUALIZAÇÃO</span>
 
-          <strong>
-            {{ curso.get('nome')?.value || 'Nome do curso' }}
-          </strong>
+            <h2>Seu currículo</h2>
 
-          <span>
+          </div>
 
-            {{ curso.get('instituicao')?.value || 'Instituição' }}
+          <div class="preview-status">
 
-            <ng-container
-              *ngIf="curso.get('cargaHoraria')?.value">
+            <ion-icon name="eye-outline"></ion-icon>
 
-              · {{ curso.get('cargaHoraria')?.value }}
+            Visualização
 
-            </ng-container>
-
-          </span>
+          </div>
 
         </div>
 
-      </section>
+
+        <!-- =========================
+             CURRÍCULO
+             ========================= -->
+
+        <div class="resume-paper">
 
 
-      <!-- habilidades -->
+          <!-- CABEÇALHO -->
 
-      <section
-        class="resume-section"
-        *ngIf="curriculoForm.get('habilidades')?.value">
+          <header class="resume-header">
 
-        <h3>Habilidades</h3>
+            <h1>
+              {{ curriculoForm.get('nome')?.value || 'Seu Nome' }}
+            </h1>
 
 
-        <div class="resume-tags">
+            <div class="resume-contact">
 
-          <span
-            *ngFor="
-              let habilidade of
-              curriculoForm.get('habilidades')?.value.split(',')
-            ">
+              <span>
 
-            {{ habilidade.trim() }}
+                <ion-icon name="mail-outline"></ion-icon>
 
-          </span>
+                {{ curriculoForm.get('email')?.value || 'seuemail@email.com' }}
+
+              </span>
+
+
+              <span>
+
+                <ion-icon name="call-outline"></ion-icon>
+
+                {{ curriculoForm.get('telefone')?.value || '(00) 00000-0000' }}
+
+              </span>
+
+            </div>
+
+          </header>
+
+
+          <!-- OBJETIVO -->
+
+          <section
+            class="resume-section"
+            *ngIf="curriculoForm.get('objetivo')?.value">
+
+            <h3>Objetivo profissional</h3>
+
+            <p>
+              {{ curriculoForm.get('objetivo')?.value }}
+            </p>
+
+          </section>
+
+
+          <!-- SOBRE -->
+
+          <section
+            class="resume-section"
+            *ngIf="curriculoForm.get('resumo')?.value">
+
+            <h3>Sobre mim</h3>
+
+            <p>
+              {{ curriculoForm.get('resumo')?.value }}
+            </p>
+
+          </section>
+
+
+          <!-- FORMAÇÃO -->
+
+          <section
+            class="resume-section"
+            *ngIf="formacoes.length > 0">
+
+            <h3>Formação</h3>
+
+
+            <div
+              class="resume-entry"
+              *ngFor="let formacao of formacoes.controls">
+
+              <strong>
+                {{ formacao.get('curso')?.value || 'Seu curso' }}
+              </strong>
+
+              <span>
+                {{ formacao.get('instituicao')?.value || 'Instituição' }}
+              </span>
+
+              <small
+                *ngIf="formacao.get('status')?.value">
+
+                {{
+                  formacao.get('status')?.value === 'cursando'
+                    ? 'Cursando'
+                    : 'Concluído'
+                }}
+
+              </small>
+
+            </div>
+
+          </section>
+
+
+          <!-- EXPERIÊNCIA -->
+
+          <section
+            class="resume-section"
+            *ngIf="experiencias.length > 0">
+
+            <h3>Experiência profissional</h3>
+
+
+            <div
+              class="resume-entry"
+              *ngFor="let experiencia of experiencias.controls">
+
+              <strong>
+                {{ experiencia.get('cargo')?.value || 'Cargo' }}
+              </strong>
+
+              <span>
+                {{ experiencia.get('empresa')?.value || 'Nome da empresa' }}
+              </span>
+
+              <p
+                *ngIf="experiencia.get('descricao')?.value">
+
+                {{ experiencia.get('descricao')?.value }}
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+          <!-- CURSOS -->
+
+          <section
+            class="resume-section"
+            *ngIf="cursos.length > 0">
+
+            <h3>Cursos</h3>
+
+
+            <div
+              class="resume-entry"
+              *ngFor="let curso of cursos.controls">
+
+              <strong>
+                {{ curso.get('nome')?.value || 'Nome do curso' }}
+              </strong>
+
+              <span>
+
+                {{ curso.get('instituicao')?.value || 'Instituição' }}
+
+                <ng-container
+                  *ngIf="curso.get('cargaHoraria')?.value">
+
+                  · {{ curso.get('cargaHoraria')?.value }}
+
+                </ng-container>
+
+              </span>
+
+            </div>
+
+          </section>
+
+
+          <!-- HABILIDADES -->
+
+          <section
+            class="resume-section"
+            *ngIf="curriculoForm.get('habilidades')?.value">
+
+            <h3>Habilidades</h3>
+
+
+            <div class="resume-tags">
+
+              <span
+                *ngFor="
+                  let habilidade of
+                  curriculoForm.get('habilidades')?.value.split(',')
+                ">
+
+                {{ habilidade.trim() }}
+
+              </span>
+
+            </div>
+
+          </section>
+
+
+          <!-- IDIOMAS -->
+
+          <section
+            class="resume-section"
+            *ngIf="idiomas.length > 0">
+
+            <h3>Idiomas</h3>
+
+
+            <div
+              class="resume-entry"
+              *ngFor="let idioma of idiomas.controls">
+
+              <strong>
+                {{ idioma.get('idioma')?.value || 'Idioma' }}
+              </strong>
+
+              <span
+                *ngIf="idioma.get('nivel')?.value">
+
+                {{
+                  idioma.get('nivel')?.value === 'basico'
+                    ? 'Básico'
+                    : idioma.get('nivel')?.value === 'intermediario'
+                      ? 'Intermediário'
+                      : idioma.get('nivel')?.value === 'avancado'
+                        ? 'Avançado'
+                        : 'Fluente'
+                }}
+
+              </span>
+
+            </div>
+
+          </section>
 
         </div>
 
-      </section>
+      </aside>
 
-
-      <!-- idiomas -->
-      <section
-        class="resume-section"
-        *ngIf="idiomas.length > 0">
-
-        <h3>Idiomas</h3>
-
-
-        <div
-          class="resume-entry"
-          *ngFor="let idioma of idiomas.controls">
-
-          <strong>
-            {{ idioma.get('idioma')?.value || 'Idioma' }}
-          </strong>
-
-          <span *ngIf="idioma.get('nivel')?.value"> {{
-              idioma.get('nivel')?.value === 'basico'
-                ? 'Básico'
-                : idioma.get('nivel')?.value === 'intermediario'
-                  ? 'Intermediário'
-                  : idioma.get('nivel')?.value === 'avancado'
-                    ? 'Avançado'
-                    : 'Fluente'
-            }}
-          </span>
-        </div>
-      </section>
-    </div>
-  </aside>
-</form>
+    </form>
 
   </main>
-<!--acessibilidade-->
-<button class="accessibility-button" type="button" aria-label="Acessibilidade">
-  <ion-icon name="accessibility-outline"></ion-icon>
-</button>
+
+
+  <!-- ACESSIBILIDADE -->
+
+  <button
+    class="accessibility-button"
+    type="button"
+    aria-label="Acessibilidade">
+
+    <ion-icon name="accessibility-outline"></ion-icon>
+
+  </button>
 
 </ion-content>

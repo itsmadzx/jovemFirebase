@@ -1,0 +1,471 @@
+<ion-content [fullscreen]="true">
+
+  <!-- CABEÇALHO -->
+  <section class="header">
+
+    <div class="header-user">
+
+      <!-- FOTO DE PERFIL -->
+      <button
+        class="profile-button"
+        type="button"
+        routerLink="/perfil">
+
+        <div class="profile-photo">
+          <span>U</span>
+        </div>
+
+        <div class="welcome">
+          <span>Bem-vindo(a),</span>
+          <strong>Usuário!</strong>
+        </div>
+
+      </button>
+
+      <!-- NOTIFICAÇÕES -->
+      <button
+        class="notification-button"
+        type="button"
+        (click)="abrirNotificacoes()">
+
+        <ion-icon name="notifications-outline"></ion-icon>
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- PESQUISA -->
+  <div class="search-box">
+
+    <ion-icon name="search-outline"></ion-icon>
+
+    <input
+      type="text"
+      placeholder="O que você está procurando?"
+    />
+
+  </div>
+
+  <!-- ATALHOS -->
+  <section class="shortcuts">
+
+    <!-- CURSOS -->
+    <button
+      class="shortcut"
+      type="button"
+      routerLink="/cursos">
+
+      <div class="shortcut-icon">
+        <ion-icon name="school-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Cursos
+      </strong>
+
+    </button>
+
+    <!-- CURRÍCULO -->
+    <button
+      class="shortcut"
+      type="button"
+      routerLink="/curriculo">
+
+      <div class="shortcut-icon">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Assistente<br>
+        de Currículo
+      </strong>
+
+    </button>
+
+    <!-- PRIMEIRO EMPREGO -->
+    <button
+      class="shortcut"
+      type="button"
+      routerLink="/vagas">
+
+      <div class="shortcut-icon">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Primeiro<br>
+        Emprego
+      </strong>
+
+    </button>
+
+    <!-- TESTE VOCACIONAL -->
+    <button
+      class="shortcut"
+      type="button"
+      routerLink="/vocacional">
+
+      <div class="shortcut-icon">
+        <ion-icon name="locate-outline"></ion-icon>
+      </div>
+
+      <strong>
+        Teste<br>
+        Vocacional
+      </strong>
+
+    </button>
+
+  </section>
+
+  <!--BANNER / CARROSSEL-->
+
+  <section class="banner">
+
+    <div class="banner-text">
+
+      <h1 [innerHTML]="slides[slideAtual].titulo"></h1>
+
+      <p>
+        {{ slides[slideAtual].descricao }}
+      </p>
+
+      <button type="button">
+        {{ slides[slideAtual].botao }}
+
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+
+    </div>
+
+
+    <div class="banner-image">
+
+      <div class="fake-person">
+      </div>
+
+    </div>
+
+    <!-- BOLINHAS -->
+    <div class="dots">
+
+      @for (slide of slides; track $index) {
+
+        <button
+          type="button"
+          [class.active]="slideAtual === $index"
+          (click)="irParaSlide($index)">
+        </button>
+
+      }
+
+    </div>
+
+  </section>
+
+  <!--RECOMENDADOS-->
+
+  <section class="recommended">
+
+    <div class="recommended-header">
+
+      <h2>Recomendados para você</h2>
+
+      <button
+        class="see-more"
+        type="button"
+        routerLink="/cursos">
+
+        Ver mais
+
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+
+      </button>
+
+    </div>
+
+    <!-- CURSOS -->
+
+    <div class="category-title">
+
+      <div class="category-icon">
+        <ion-icon name="school-outline"></ion-icon>
+      </div>
+
+      <h3>Cursos</h3>
+
+    </div>
+
+    <!-- CARD DO CURSO -->
+
+    <button
+      class="recommendation-card"
+      type="button"
+      (click)="abrirCurso1()">
+
+      <div class="company-logo">
+
+        Fundação<br>
+
+        <strong>Bradesco</strong>
+
+      </div>
+
+      <div class="course-info">
+
+        <h4>Fundamentos de IA no Azure</h4>
+
+        <div class="course-details">
+
+          <span>
+            <ion-icon name="time-outline"></ion-icon>
+            16h
+          </span>
+
+          <span>
+            <ion-icon name="ribbon-outline"></ion-icon>
+            Gratuito
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <ion-icon
+        class="card-arrow"
+        name="chevron-forward-outline">
+      </ion-icon>
+
+    </button>
+
+    <br>
+
+    <!--VAGAS-->
+
+    <div class="category-title">
+
+      <div class="category-icon">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </div>
+
+      <h3>Vagas</h3>
+
+    </div>
+
+    <!-- CARD DA VAGA -->
+
+    <button
+      class="recommendation-card"
+      type="button"
+      (click)="abrirCIEE()">
+
+      <div class="company-logo vaga-logo">
+
+        <strong>ciee</strong>
+
+      </div>
+
+
+      <div class="course-info">
+
+        <h4>Jovem Aprendiz</h4>
+
+        <div class="course-details">
+
+          <span>
+            <ion-icon name="location-outline"></ion-icon>
+            São Paulo - SP
+          </span>
+
+          <span>
+            <ion-icon name="school-outline"></ion-icon>
+            Ensino médio
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <ion-icon
+        class="card-arrow"
+        name="chevron-forward-outline">
+      </ion-icon>
+
+    </button>
+
+  </section>
+
+  <!-- ACESSIBILIDADE -->
+
+  <button
+    class="accessibility"
+    type="button">
+
+    <ion-icon name="accessibility-outline"></ion-icon>
+
+  </button>
+
+  <!--MENU INFERIOR-->
+
+  <nav class="bottom-menu">
+
+    <div class="bottom-item active">
+
+      <ion-icon name="home"></ion-icon>
+
+      <span>Início</span>
+
+    </div>
+
+
+    <div
+      class="bottom-item"
+      routerLink="/cursos">
+
+      <ion-icon name="school-outline"></ion-icon>
+
+      <span>Cursos</span>
+
+    </div>
+
+
+    <div
+      class="bottom-item"
+      routerLink="/vagas">
+
+      <ion-icon name="briefcase-outline"></ion-icon>
+
+      <span>Vagas</span>
+
+    </div>
+
+
+    <div
+      class="bottom-item"
+      routerLink="/chatbot">
+
+      <ion-icon name="chatbubble-outline"></ion-icon>
+
+      <span>Chat</span>
+
+    </div>
+
+
+    <div
+      class="bottom-item"
+      routerLink="/perfil">
+
+      <ion-icon name="person-outline"></ion-icon>
+
+      <span>Perfil</span>
+
+    </div>
+
+  </nav>
+
+  <!--PAINEL DE NOTIFICAÇÕES-->
+
+<div
+  class="notification-overlay"
+  [class.open]="notificacoesAberta"
+  (click)="fecharNotificacoes()">
+
+  <aside
+    class="notification-panel"
+    [class.open]="notificacoesAberta"
+    (click)="$event.stopPropagation()">
+
+    <!-- CABEÇALHO -->
+
+    <div class="notification-header">
+
+      <h2>Notificações</h2>
+
+      <button
+        type="button"
+        class="close-notifications"
+        (click)="fecharNotificacoes()">
+
+        <ion-icon name="close-outline"></ion-icon>
+
+      </button>
+
+    </div>
+
+
+    <!-- NOTIFICAÇÕES -->
+
+    <div class="notification-content">
+
+      <div class="notification-item">
+
+        <div class="notification-icon">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+
+        <div class="notification-text">
+
+          <strong>
+            Nova oportunidade!
+          </strong>
+
+          <p>
+            Encontramos uma vaga de Jovem Aprendiz que pode combinar com você.
+          </p>
+
+          <span>
+            Agora
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="notification-item">
+
+        <div class="notification-icon">
+          <ion-icon name="school-outline"></ion-icon>
+        </div>
+
+        <div class="notification-text">
+
+          <strong>
+            Curso recomendado
+          </strong>
+
+          <p>
+            Um novo curso gratuito foi recomendado para você.
+          </p>
+
+          <span>
+            Ontem
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="empty-notifications">
+
+        <ion-icon name="notifications-off-outline"></ion-icon>
+
+        <h3>Nenhuma notificação</h3>
+
+        <p>
+          Quando houver novidades, elas aparecerão aqui.
+        </p>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+</div>
+
+</ion-content>

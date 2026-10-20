@@ -1,0 +1,1244 @@
+/* BASE */
+
+ion-content {
+  --background: #f8f9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+
+.header {
+  width: 100%;
+  height: 200px;
+  padding: 55px 60px 0;
+
+  position: relative;
+
+  background: #151da3;
+  color: white;
+
+  border-radius: 0 0 35px 35px;
+}
+
+.header-user {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-photo {
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #eeeeee;
+
+  border: 4px solid #746cff;
+  border-radius: 50%;
+}
+
+.profile-photo span {
+  color: #2735c4;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.welcome span {
+  font-size: 26px;
+}
+
+.welcome strong {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.notification-button {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.notification-button ion-icon {
+  font-size: 32px;
+}
+
+/* PESQUISA */
+
+.search-box {
+  position: relative;
+  z-index: 2;
+
+  height: 82px;
+
+  margin: -45px 35px 0;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+
+  border-radius: 45px;
+
+  box-shadow: 0 8px 25px rgba(38, 42, 150, 0.12);
+}
+
+.search-box ion-icon {
+  color: #5965a9;
+  font-size: 38px;
+}
+
+.search-box input {
+  flex: 1;
+
+  margin-left: 20px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #333;
+
+  font-size: 20px;
+}
+
+.search-box input::placeholder {
+  color: #5965a9;
+}
+
+/* ATALHOS */
+
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin: 38px 35px 0;
+}
+
+.shortcut {
+  height: 215px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  border: none;
+  border-radius: 28px;
+
+  background: #eff0ff;
+  color: #101b9e;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.shortcut-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #746cff,
+    #4434e9
+  );
+
+  color: white;
+}
+
+.shortcut-icon ion-icon {
+  font-size: 48px;
+}
+
+.shortcut strong {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+/* BANNER / CARROSSEL */
+
+.banner {
+  position: relative;
+
+  height: 345px;
+
+  margin: 40px 35px 0;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    100deg,
+    #e4e3ff,
+    #c5c4ff
+  );
+}
+
+.banner-text {
+  width: 55%;
+
+  padding: 38px 35px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.banner-text h1 {
+  margin: 0;
+
+  color: #1223a5;
+
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.banner-text p {
+  margin: 25px 0;
+
+  color: #5061ba;
+
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.banner-text button {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 25px;
+
+  border: none;
+  border-radius: 35px;
+
+  background: linear-gradient(
+    90deg,
+    #4937ef,
+    #543fff
+  );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.banner-image {
+  width: 50%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #c5c4ff,
+    #9997ed
+  );
+
+  border-radius: 50% 0 0 50%;
+}
+
+.fake-person {
+  margin-bottom: -10px;
+
+  font-size: 180px;
+}
+
+.dots {
+  position: absolute;
+  z-index: 5;
+
+  left: 50%;
+  bottom: 8px;
+
+  display: flex;
+
+  gap: 9px;
+
+  transform: translateX(-50%);
+}
+
+.dots button {
+  width: 13px;
+  height: 13px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: #4434ef;
+}
+
+/* RECOMENDADOS */
+
+.recommended {
+  width: 100%;
+
+  padding: 30px 40px 120px;
+}
+
+.recommended-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.recommended-header h2 {
+  margin: 0;
+
+  color: #1528a5;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.see-more {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px;
+
+  border: none;
+  background: transparent;
+
+  color: #4838ff;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.see-more ion-icon {
+  font-size: 25px;
+}
+
+/* CATEGORIAS */
+
+.category-title {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.category-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e4e4ff;
+}
+
+.category-icon ion-icon {
+  color: #1831c4;
+
+  font-size: 40px;
+}
+
+.category-title h3 {
+  margin: 0;
+
+  color: #1831c4;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* CARDS DE RECOMENDAÇÃO */
+
+.recommendation-card {
+  width: 100%;
+  min-height: 185px;
+
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #eeeeff;
+  color: #1528a5;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(40, 50, 160, 0.12);
+}
+
+.recommendation-card:active {
+  transform: scale(0.99);
+}
+
+/* Logo */
+
+.company-logo {
+  width: 270px;
+  height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 25px;
+
+  background: white;
+
+  color: #e31d3b;
+
+  font-size: 27px;
+}
+
+.company-logo strong {
+  font-size: 32px;
+}
+
+/* Informações */
+
+.course-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.course-info h4 {
+  margin: 0 0 20px;
+
+  color: #1528a5;
+
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.course-details {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+.course-details span {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #5969bd;
+
+  font-size: 22px;
+}
+
+.course-details ion-icon {
+  font-size: 27px;
+}
+
+.card-arrow {
+  flex-shrink: 0;
+
+  margin-right: 15px;
+
+  color: #1831c4;
+
+  font-size: 45px;
+}
+
+.vaga-logo {
+  color: #1661ae;
+}
+
+/* ACESSIBILIDADE */
+
+.accessibility {
+  position: fixed;
+  z-index: 20;
+
+  right: 22px;
+  bottom: 105px;
+
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #4534ee;
+  color: white;
+
+  box-shadow: 0 8px 20px rgba(45, 35, 200, 0.35);
+
+  cursor: pointer;
+}
+
+.accessibility ion-icon {
+  font-size: 35px;
+}
+
+/* MENU INFERIOR*/
+
+.bottom-menu {
+  position: fixed;
+  z-index: 10;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100px;
+
+  padding: 8px 10px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+
+  background: white;
+
+  border-radius: 30px 30px 0 0;
+
+  box-shadow: 0 -5px 25px rgba(50, 50, 120, 0.08);
+}
+
+.bottom-item {
+  height: 85px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: #5662a5;
+
+  cursor: pointer;
+}
+
+.bottom-item ion-icon {
+  font-size: 34px;
+}
+
+.bottom-item span {
+  font-size: 15px;
+}
+
+.bottom-item.active {
+  color: #1728bd;
+
+  font-weight: bold;
+}
+
+.bottom-item.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+
+  width: 70px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: #4134ef;
+}
+
+/* PAINEL DE NOTIFICAÇÕES */
+
+.notification-overlay {
+  position: fixed;
+  z-index: 100;
+
+  inset: 0;
+
+  background: rgba(10, 15, 70, 0.25);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.notification-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification-panel {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 430px;
+  max-width: 90vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f8f9ff;
+
+  box-shadow: -8px 0 30px rgba(30, 35, 120, 0.15);
+
+  transform: translateX(100%);
+
+  transition: transform 0.3s ease;
+}
+
+.notification-panel.open {
+  transform: translateX(0);
+}
+
+/* Cabeçalho das notificações */
+
+.notification-header {
+  height: 100px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  background: #151da3;
+  color: white;
+}
+
+.notification-header h2 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.close-notifications {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.close-notifications ion-icon {
+  font-size: 27px;
+}
+
+
+/* Conteúdo */
+
+.notification-content {
+  flex: 1;
+
+  padding: 20px;
+
+  overflow-y: auto;
+}
+
+.notification-item {
+  display: flex;
+
+  gap: 15px;
+
+  padding: 18px;
+  margin-bottom: 12px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow: 0 5px 18px rgba(40, 45, 130, 0.08);
+}
+
+.notification-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #e7e6ff;
+  color: #4937ef;
+}
+
+.notification-icon ion-icon {
+  font-size: 24px;
+}
+
+.notification-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-text strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #1528a5;
+
+  font-size: 16px;
+}
+
+.notification-text p {
+  margin: 0 0 8px;
+
+  color: #6874ad;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.notification-text span {
+  color: #9aa2c5;
+
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE — CELULAR*/
+
+@media (max-width: 768px) {
+
+  /* ---------- Cabeçalho ---------- */
+
+  .header {
+    height: 160px;
+
+    padding: 35px 25px 0;
+
+    border-radius: 0 0 30px 30px;
+  }
+
+  .profile-button {
+    gap: 14px;
+  }
+
+  .profile-photo {
+    width: 78px;
+    height: 78px;
+
+    border-width: 3px;
+  }
+
+  .profile-photo span {
+    font-size: 24px;
+  }
+
+  .welcome {
+    gap: 2px;
+  }
+
+  .welcome span {
+    font-size: 17px;
+  }
+
+  .welcome strong {
+    font-size: 26px;
+    line-height: 1.05;
+  }
+
+  .notification-button {
+    top: 10px;
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-button ion-icon {
+    font-size: 27px;
+  }
+
+  /* ---------- Pesquisa ---------- */
+
+  .search-box {
+    height: 62px;
+
+    margin: -35px 25px 0;
+    padding: 0 20px;
+
+    border-radius: 35px;
+  }
+
+  .search-box ion-icon {
+    font-size: 28px;
+  }
+
+  .search-box input {
+    min-width: 0;
+
+    margin-left: 12px;
+
+    font-size: 15px;
+  }
+
+  /* ---------- Atalhos ---------- */
+
+  .shortcuts {
+    display: flex;
+
+    gap: 12px;
+
+    margin: 30px 20px 0;
+
+    padding-bottom: 5px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .shortcuts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shortcut {
+    width: 105px;
+    min-width: 105px;
+    height: 160px;
+
+    flex-shrink: 0;
+
+    padding: 12px 8px;
+
+    gap: 13px;
+
+    border-radius: 20px;
+  }
+
+  .shortcut-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .shortcut-icon ion-icon {
+    font-size: 34px;
+  }
+
+  .shortcut strong {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* ---------- Banner ---------- */
+
+  .banner {
+    height: 245px;
+
+    margin: 30px 20px 0;
+
+    border-radius: 24px;
+  }
+
+  .banner-text {
+    width: 58%;
+
+    padding: 25px 20px;
+  }
+
+  .banner-text h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .banner-text p {
+    margin: 14px 0;
+
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .banner-text button {
+    padding: 10px 16px;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  .banner-text button ion-icon {
+    font-size: 16px;
+  }
+
+  .banner-image {
+    position: absolute;
+
+    top: 0;
+    right: -35px;
+
+    width: 55%;
+    height: 100%;
+
+    z-index: 1;
+
+    border-radius: 50% 0 0 50%;
+  }
+
+  .fake-person {
+    margin: 0;
+
+    font-size: 90px;
+
+    transform: translateX(-5px);
+  }
+
+  .dots {
+    bottom: 7px;
+  }
+
+  .dots button {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dots button.active {
+    width: 9px;
+    height: 9px;
+  }
+
+  /* ---------- Recomendados ---------- */
+
+  .recommended {
+    padding: 25px 20px 120px;
+
+    overflow: hidden;
+  }
+
+  .recommended-header {
+    margin-bottom: 22px;
+
+    align-items: flex-start;
+  }
+
+  .recommended-header h2 {
+    max-width: 210px;
+
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  .see-more {
+    flex-shrink: 0;
+
+    padding: 5px;
+
+    gap: 4px;
+
+    font-size: 17px;
+  }
+
+  .see-more ion-icon {
+    font-size: 18px;
+  }
+
+  /* ---------- Categorias ---------- */
+
+  .category-title {
+    gap: 12px;
+
+    margin-bottom: 15px;
+  }
+
+  .category-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .category-icon ion-icon {
+    font-size: 28px;
+  }
+
+  .category-title h3 {
+    font-size: 20px;
+  }
+
+  /* ---------- Cards ---------- */
+
+  .recommendation-card {
+    min-width: 0;
+    min-height: 140px;
+
+    padding: 14px;
+
+    gap: 14px;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+  }
+
+  .recommendation-card .company-logo {
+    width: 135px;
+    min-width: 135px;
+    height: 95px;
+
+    border-radius: 16px;
+
+    font-size: 18px;
+  }
+
+  .recommendation-card .company-logo strong {
+    font-size: 22px;
+  }
+
+  .course-info {
+    min-width: 0;
+
+    overflow: hidden;
+  }
+
+  .course-info h4 {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    line-height: 1.2;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+  }
+
+  .course-details {
+    gap: 10px;
+  }
+
+  .course-details span {
+    gap: 4px;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+  }
+
+  .course-details ion-icon {
+    font-size: 18px;
+  }
+
+  .card-arrow {
+    margin-right: 0;
+
+    font-size: 27px;
+  }
+
+  .vaga-logo {
+    font-size: 24px;
+  }
+
+  .vaga-logo strong {
+    font-size: 28px;
+  }
+
+  /* ---------- Acessibilidade ---------- */
+
+  .accessibility {
+    right: 18px;
+    bottom: 82px;
+
+    width: 58px;
+    height: 58px;
+
+    z-index: 30;
+  }
+
+  .accessibility ion-icon {
+    font-size: 30px;
+  }
+
+  /* ---------- Menu inferior ---------- */
+
+  .bottom-menu {
+    height: 76px;
+
+    padding: 4px 8px;
+
+    border-radius: 25px 25px 0 0;
+  }
+
+  .bottom-item {
+    height: 68px;
+
+    gap: 2px;
+  }
+
+  .bottom-item ion-icon {
+    font-size: 25px;
+  }
+
+  .bottom-item span {
+    font-size: 11px;
+  }
+
+  .bottom-item.active::after {
+    width: 45px;
+    height: 3px;
+  }
+
+  /* ---------- Notificações ---------- */
+
+  .notification-panel {
+    width: 88vw;
+    max-width: 380px;
+  }
+
+  .notification-header {
+    height: 85px;
+
+    padding: 20px;
+  }
+
+  .notification-header h2 {
+    font-size: 22px;
+  }
+
+  .notification-content {
+    padding: 15px;
+  }
+
+  .notification-item {
+    padding: 15px;
+
+    border-radius: 17px;
+  }
+
+  /* ---------- Scroll ---------- */
+
+  ion-content {
+    --overflow: auto;
+  }
+}

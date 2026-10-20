@@ -1,0 +1,123 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Configurações</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="config-container">
+
+    <!-- conta -->
+    <section class="config-section">
+
+      <h2>Minha conta</h2>
+
+      <ion-card class="config-card">
+
+        <ion-item button detail="true">
+          <div class="config-icon">
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
+
+          <ion-label>
+            <h3>Dados pessoais</h3>
+            <p>Nome, e-mail e informações da conta</p>
+          </ion-label>
+        </ion-item>
+
+
+        <ion-item button detail="true">
+          <div class="config-icon">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </div>
+
+          <ion-label>
+            <h3>Privacidade e segurança</h3>
+            <p>Gerencie suas informações e segurança</p>
+          </ion-label>
+        </ion-item>
+
+      </ion-card>
+
+    </section>
+
+
+    <!-- preferencias -->
+    <section class="config-section">
+
+      <h2>Preferências</h2>
+
+      <ion-card class="config-card">
+
+        <ion-item>
+          <div class="config-icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </div>
+
+          <ion-label>
+            <h3>Notificações</h3>
+            <p>Receba avisos sobre oportunidades</p>
+          </ion-label>
+
+          <ion-toggle [(ngModel)]="notificacoes" (ionChange)="salvarAlteracao(notificacoes
+                ? 'Notificações ativadas.'
+                : 'Notificações desativadas.')">
+          </ion-toggle>
+
+        </ion-item>
+
+
+        <ion-item button detail="true">
+          <div class="config-icon">
+            <ion-icon name="options-outline"></ion-icon>
+          </div>
+
+          <ion-label>
+            <h3>Preferências de interesse</h3>
+            <p>Personalize suas áreas de interesse</p>
+          </ion-label>
+        </ion-item>
+
+      </ion-card>
+
+    </section>
+
+
+    <!-- sobre -->
+    <section class="config-section">
+
+      <h2>Sobre</h2>
+
+      <ion-card class="config-card">
+
+        <ion-item button detail="true">
+          <div class="config-icon">
+            <ion-icon name="information-circle-outline"></ion-icon>
+          </div>
+
+          <ion-label>
+            <h3>Sobre o Impulso Jovem</h3>
+            <p>Conheça o projeto</p>
+          </ion-label>
+        </ion-item>
+
+      </ion-card>
+    </section>
+
+
+    <!-- sair da conta -->
+    <ion-button expand="block" fill="outline" class="logout-button" (click)="sair()">
+
+      <ion-icon name="log-out-outline" slot="start"></ion-icon>
+      Sair da conta
+    </ion-button>
+  </div>
+</ion-content>

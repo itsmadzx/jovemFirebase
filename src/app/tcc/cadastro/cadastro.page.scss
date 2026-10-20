@@ -1,0 +1,395 @@
+ion-content {
+  --background: #f8f9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.cadastro-container {
+  min-height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px 25px;
+
+  background: #f8f9ff;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.logo-icon {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #746cff,
+    #4434e9
+  );
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(68, 52, 233, 0.25);
+
+  margin-bottom: 15px;
+}
+
+.logo-icon ion-icon {
+  font-size: 43px;
+}
+
+.logo-area h1 {
+  margin: 0;
+
+  color: #1528a5;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.logo-area p {
+  margin: 7px 0 0;
+
+  color: #5969bd;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.cadastro-form {
+  width: 100%;
+  max-width: 450px;
+
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 32px 35px;
+
+  box-shadow:
+    0 12px 35px rgba(38, 42, 150, 0.10);
+}
+
+.cadastro-form h2 {
+  margin: 0;
+
+  color: #1528a5;
+
+  font-size: 27px;
+
+  font-weight: 700;
+}
+
+.cadastro-description {
+  margin: 7px 0 25px;
+
+  color: #6874ad;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.input-group {
+  width: 100%;
+
+  margin-bottom: 17px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #2637a8;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.input-box {
+  width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
+  border: 2px solid #e4e6f5;
+
+  border-radius: 15px;
+
+  background: #fafaff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-box:focus-within {
+  border-color: #5a4af3;
+
+  box-shadow:
+    0 0 0 3px rgba(90, 74, 243, 0.10);
+}
+
+.input-box ion-icon {
+  flex-shrink: 0;
+
+  font-size: 21px;
+
+  color: #5969bd;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+
+  margin-left: 11px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #252b52;
+
+  font-size: 15px;
+}
+
+.input-box input::placeholder {
+  color: #9aa2c5;
+}
+
+
+/* =========================
+   BOTÃO CADASTRO
+   ========================= */
+
+.cadastro-button {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    90deg,
+    #4937ef,
+    #543fff
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(73, 55, 239, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cadastro-button ion-icon {
+  font-size: 20px;
+}
+
+.cadastro-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(73, 55, 239, 0.30);
+}
+
+.cadastro-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   VOLTAR PARA LOGIN
+   ========================= */
+
+.login-area {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 22px;
+
+  text-align: center;
+
+  color: #6874ad;
+
+  font-size: 14px;
+}
+
+.login-area button {
+  border: none;
+
+  background: transparent;
+
+  padding: 3px;
+
+  color: #4937ef;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+  .cadastro-container {
+    padding: 25px 18px;
+  }
+
+  .logo-area {
+    margin-bottom: 22px;
+  }
+
+  .logo-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 19px;
+
+    margin-bottom: 12px;
+  }
+
+  .logo-icon ion-icon {
+    font-size: 36px;
+  }
+
+  .logo-area h1 {
+    font-size: 26px;
+  }
+
+  .logo-area p {
+    font-size: 13px;
+  }
+
+  .cadastro-form {
+    max-width: 100%;
+
+    padding: 27px 22px;
+
+    border-radius: 25px;
+  }
+
+  .cadastro-form h2 {
+    font-size: 24px;
+  }
+
+  .cadastro-description {
+    font-size: 14px;
+
+    margin-bottom: 22px;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .input-box {
+    height: 50px;
+  }
+
+  .cadastro-button {
+    height: 54px;
+  }
+}
+
+/* =====================================================
+   VER A SENHA BOTAO
+   ===================================================== */
+   
+  .password-toggle {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5969bd;
+
+    cursor: pointer;
+  }
+
+  .password-toggle ion-icon {
+    font-size: 21px;
+  }

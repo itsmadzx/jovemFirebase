@@ -1,0 +1,198 @@
+<ion-content [fullscreen]="true">
+
+  <div class="cadastro-container">
+
+    <!-- LOGO / TÍTULO -->
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        <ion-icon name="rocket-outline"></ion-icon>
+      </div>
+
+      <h1>Impulso Jovem</h1>
+
+      <p>
+        Comece a construir o seu futuro.
+      </p>
+
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+    <div class="cadastro-form">
+
+      <h2>Crie sua conta</h2>
+
+      <p class="cadastro-description">
+        Preencha seus dados para começar.
+      </p>
+
+
+      <!-- NOME -->
+      <div class="input-group">
+
+        <label for="nome">
+          Nome completo
+        </label>
+
+        <div class="input-box">
+
+          <ion-icon name="person-outline"></ion-icon>
+
+          <input
+            id="nome"
+            type="text"
+            placeholder="Digite seu nome"
+            [(ngModel)]="nome"
+          />
+
+        </div>
+
+      </div>
+
+
+      <!-- E-MAIL -->
+      <div class="input-group">
+
+        <label for="email">
+          E-mail
+        </label>
+
+        <div class="input-box">
+
+          <ion-icon name="mail-outline"></ion-icon>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="Digite seu e-mail"
+            [(ngModel)]="email"
+          />
+
+        </div>
+
+      </div>
+
+
+      <!-- SENHA -->
+      <div class="input-group">
+
+        <label for="senha">
+          Senha
+        </label>
+
+        <div class="input-box">
+
+          <ion-icon name="lock-closed-outline"></ion-icon>
+
+          <input
+            id="senha"
+            [type]="mostrarSenha ? 'text' : 'password'"
+            placeholder="Crie uma senha"
+            [(ngModel)]="senha"
+          />
+
+          <button
+            class="password-toggle"
+            type="button"
+            (click)="alternarSenha()"
+          >
+
+            <ion-icon
+              [name]="mostrarSenha
+                ? 'eye-off-outline'
+                : 'eye-outline'"
+            ></ion-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONFIRMAR SENHA -->
+      <div class="input-group">
+
+        <label for="confirmarSenha">
+          Confirmar senha
+        </label>
+
+        <div class="input-box">
+
+          <ion-icon name="lock-closed-outline"></ion-icon>
+
+          <input
+            id="confirmarSenha"
+            [type]="mostrarConfirmarSenha ? 'text' : 'password'"
+            placeholder="Digite a senha novamente"
+            [(ngModel)]="confirmarSenha"
+          />
+
+          <button
+            class="password-toggle"
+            type="button"
+            (click)="alternarConfirmarSenha()"
+          >
+
+            <ion-icon
+              [name]="mostrarConfirmarSenha
+                ? 'eye-off-outline'
+                : 'eye-outline'"
+            ></ion-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- ERRO -->
+      <div
+        class="erro"
+        *ngIf="erro"
+      >
+        {{ erro }}
+      </div>
+
+
+      <!-- CRIAR CONTA -->
+      <button
+        class="cadastro-button"
+        type="button"
+        (click)="criarConta()"
+        [disabled]="carregando"
+      >
+
+        {{ carregando ? 'Criando conta...' : 'Criar minha conta' }}
+
+        <ion-icon
+          *ngIf="!carregando"
+          name="arrow-forward-outline"
+        ></ion-icon>
+
+      </button>
+
+
+      <!-- VOLTAR PARA LOGIN -->
+      <div class="login-area">
+
+        <span>
+          Já possui uma conta?
+        </span>
+
+        <button
+          type="button"
+          (click)="voltarParaLogin()"
+        >
+          Entrar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

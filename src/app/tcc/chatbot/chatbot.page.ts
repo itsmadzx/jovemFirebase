@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IaService } from '../services/ia';
+import { IaService } from '../../services/ia';
 
 interface Mensagem {
   texto: string;

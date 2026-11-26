@@ -12,12 +12,12 @@
         routerLink="/perfil">
 
         <div class="profile-photo">
-          <span>U</span>
+          <span>{{ (nomeUsuario || 'U').charAt(0).toUpperCase() }}</span>
         </div>
 
         <div class="welcome">
           <span>Bem-vindo(a),</span>
-          <strong>Usuário!</strong>
+          <strong>{{ nomeUsuario || 'Usuário' }}!</strong>
         </div>
 
       </button>

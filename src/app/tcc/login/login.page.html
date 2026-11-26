@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true">
+
+  <div class="cadastro-container">
+
+    <div class="logo-area">
+      <div class="logo-icon">
+        <ion-icon name="rocket-outline"></ion-icon>
+      </div>
+      <h1>Impulso Jovem</h1>
+      <p>Comece a construir o seu futuro.</p>
+    </div>
+
+    <div class="cadastro-form">
+
+      <h2>Entrar</h2>
+      <p class="cadastro-description">Acesse sua conta para continuar.</p>
+
+      <div class="input-group">
+        <label for="login-email">E-mail</label>
+        <div class="input-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input
+            id="login-email"
+            type="email"
+            autocomplete="email"
+            placeholder="Digite seu e-mail"
+            [(ngModel)]="email"
+            (keyup.enter)="entrar()"
+          />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="login-senha">Senha</label>
+        <div class="input-box">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            id="login-senha"
+            [type]="mostrarSenha ? 'text' : 'password'"
+            autocomplete="current-password"
+            placeholder="Digite sua senha"
+            [(ngModel)]="senha"
+            (keyup.enter)="entrar()"
+          />
+          <button
+            class="password-toggle"
+            type="button"
+            [attr.aria-label]="mostrarSenha ? 'Ocultar senha' : 'Mostrar senha'"
+            (click)="mostrarSenha = !mostrarSenha"
+          >
+            <ion-icon [name]="mostrarSenha ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="esqueci">
+        <button type="button" (click)="esqueciSenha()">Esqueceu a senha?</button>
+      </div>
+
+      <div class="erro" role="alert" *ngIf="erro">{{ erro }}</div>
+      <div class="aviso" role="status" *ngIf="aviso">{{ aviso }}</div>
+
+      <button
+        class="cadastro-button"
+        type="button"
+        (click)="entrar()"
+        [disabled]="carregando"
+      >
+        {{ carregando ? 'Entrando...' : 'Entrar' }}
+        <ion-icon *ngIf="!carregando" name="arrow-forward-outline"></ion-icon>
+      </button>
+
+      <div class="login-area">
+        <span>Novo usuário?</span>
+        <button type="button" (click)="criarConta()">Clique aqui</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

@@ -90,6 +90,7 @@
             [type]="mostrarSenha ? 'text' : 'password'"
             placeholder="Crie uma senha"
             [(ngModel)]="senha"
+            (keyup.enter)="criarConta()"
           />
 
           <button
@@ -127,6 +128,7 @@
             [type]="mostrarConfirmarSenha ? 'text' : 'password'"
             placeholder="Digite a senha novamente"
             [(ngModel)]="confirmarSenha"
+            (keyup.enter)="criarConta()"
           />
 
           <button

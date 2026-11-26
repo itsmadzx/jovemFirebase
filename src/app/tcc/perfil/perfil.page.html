@@ -2,7 +2,7 @@
   <ion-toolbar>
 
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
     </ion-buttons>
 
     <ion-title>Meu Perfil</ion-title>
@@ -26,10 +26,10 @@
       <ion-icon name="person-outline"></ion-icon>
     </div>
 
-    <h1>Seu nome</h1>
-    <p>seuemail@email.com</p>
+    <h1>{{ nome || 'Seu nome' }}</h1>
+    <p>{{ email }}</p>
 
-    <ion-button fill="outline" size="small" class="edit-button">
+    <ion-button fill="outline" size="small" class="edit-button" routerLink="/dados-pessoais">
       Editar perfil
     </ion-button>
 

@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados pessoais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-progress-bar type="indeterminate" *ngIf="carregando"></ion-progress-bar>
+
+  <p class="falha" role="alert" *ngIf="erroCarregar">
+    Não foi possível carregar seus dados. Verifique a conexão e abra a tela novamente.
+  </p>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input label="Nome completo" labelPlacement="stacked" type="text"
+        [(ngModel)]="dados.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Nome de usuário" labelPlacement="stacked" type="text"
+        [(ngModel)]="dados.nomeUsuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="E-mail" labelPlacement="stacked" type="email" [readonly]="true"
+        [(ngModel)]="dados.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Telefone" labelPlacement="stacked" type="tel"
+        [(ngModel)]="dados.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Cidade" labelPlacement="stacked" type="text"
+        [(ngModel)]="dados.cidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Estado (UF)" labelPlacement="stacked" type="text" [maxlength]="2"
+        [(ngModel)]="dados.estado"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Data de nascimento" labelPlacement="stacked" type="date"
+        [(ngModel)]="dados.dataNascimento"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" (click)="salvar()" [disabled]="carregando || salvando || erroCarregar">
+    {{ salvando ? 'Salvando...' : 'Salvar' }}
+  </ion-button>
+
+</ion-content>

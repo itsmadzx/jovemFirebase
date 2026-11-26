@@ -22,7 +22,7 @@
 
       <ion-card class="config-card">
 
-        <ion-item button detail="true">
+        <ion-item button detail="true" routerLink="/dados-pessoais">
           <div class="config-icon">
             <ion-icon name="person-outline"></ion-icon>
           </div>
@@ -34,14 +34,14 @@
         </ion-item>
 
 
-        <ion-item button detail="true">
+        <ion-item button detail="true" (click)="alterarSenha()">
           <div class="config-icon">
             <ion-icon name="lock-closed-outline"></ion-icon>
           </div>
 
           <ion-label>
-            <h3>Privacidade e segurança</h3>
-            <p>Gerencie suas informações e segurança</p>
+            <h3>Alterar senha</h3>
+            <p>Receba um link no seu e-mail</p>
           </ion-label>
         </ion-item>
 

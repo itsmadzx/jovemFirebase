@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnDestroy, OnInit, ChangeDetectorRef, inject } from '@angular/core';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-inicio',
@@ -35,7 +36,16 @@ export class InicioPage implements OnInit, OnDestroy {
 
   private intervalo: any;
 
+  private usuarioService = inject(UsuarioService);
+
+  nomeUsuario = '';
+
   constructor(private cdr: ChangeDetectorRef) {}
+
+  ionViewWillEnter() {
+    this.nomeUsuario = this.usuarioService.dadosBasicos().nome.split(' ')[0];
+    this.cdr.detectChanges();
+  }
 
   ngOnInit() {
     this.iniciarCarrossel();

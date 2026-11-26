@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app'; //função para inicializar o app Firebase
 import { getFirestore, provideFirestore } from '@angular/fire/firestore'; //funções para o Firestore
 import { environment } from '../environments/environment'; //suas configurações do ambiente
+import { getAuth, provideAuth } from '@angular/fire/auth'; //login e cadastro
 
 import { provideHttpClient } from '@angular/common/http'; //import pra ia
 
@@ -22,6 +23,7 @@ import { provideHttpClient } from '@angular/common/http'; //import pra ia
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
     //provisão do firestore
     provideFirestore(() => getFirestore())
   ],

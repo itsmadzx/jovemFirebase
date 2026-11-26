@@ -1,13 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { NavController } from '@ionic/angular/lazy';
 
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateProfile
-} from 'firebase/auth';
-
-import { app } from '../../firebase.config';
+import { UsuarioService } from '../../services/usuario.service';
 
 
 @Component({
@@ -30,12 +24,26 @@ export class CadastroPage {
   carregando = false;
 
 
-  constructor(
-    private router: Router
-  ) {}
+  private usuarioService = inject(UsuarioService);
+  private nav = inject(NavController);
+  private cdr = inject(ChangeDetectorRef);
+
+
+  // Limpa o formulário sempre que a tela é aberta
+  ionViewWillEnter() {
+
+    this.nome = this.email = this.senha = this.confirmarSenha = this.erro = '';
+    this.mostrarSenha = this.mostrarConfirmarSenha = false;
+    this.cdr.detectChanges();
+
+  }
 
 
   async criarConta() {
+
+    if (this.carregando) {
+      return;
+    }
 
     // Limpa erro anterior
     this.erro = '';
@@ -104,34 +112,14 @@ export class CadastroPage {
 
     try {
 
-      const auth = getAuth(app);
-
-
-      const credencial =
-        await createUserWithEmailAndPassword(
-          auth,
-          this.email.trim(),
-          this.senha
-        );
-
-
-      // Salva o nome do usuário no Firebase
-      await updateProfile(
-        credencial.user,
-        {
-          displayName: this.nome.trim()
-        }
+      await this.usuarioService.cadastrar(
+        this.nome.trim(),
+        this.email.trim(),
+        this.senha
       );
-
-
-      console.log(
-        'Conta criada com sucesso!',
-        credencial.user
-      );
-
 
       // Só chega aqui se a conta realmente foi criada
-      await this.router.navigate(['/inicio']);
+      await this.nav.navigateRoot('/inicio');
 
 
     } catch (error: any) {
@@ -180,6 +168,7 @@ export class CadastroPage {
     finally {
 
       this.carregando = false;
+      this.cdr.detectChanges();
 
     }
 
@@ -192,7 +181,7 @@ export class CadastroPage {
 
   voltarParaLogin() {
 
-    this.router.navigate(['/home']);
+    this.nav.navigateRoot('/login');
 
   }
 

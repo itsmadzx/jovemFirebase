@@ -27,7 +27,7 @@
     "@capacitor/keyboard": "8.0.5",
     "@capacitor/status-bar": "8.0.3",
     "@ionic/angular": "^9.0.0",
-    "firebase": "^11.10.0",
+    "firebase": "^12.18.0",
     "ionicons": "^8.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

@@ -1,0 +1,27 @@
+.esqueci {
+  text-align: right;
+  margin-bottom: 12px;
+
+  button {
+    border: none;
+    background: transparent;
+    padding: 3px;
+    color: #4937ef;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.erro,
+.aviso {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.erro {
+  color: #b91c1c;
+}
+
+.aviso {
+  color: #047857;
+}

@@ -1,5 +1,5 @@
 ion-content {
-  --background: #f8f8ff;
+  --background: var(--t-bg-f8f8ff, #f8f8ff);
 }
 
 ion-toolbar {
@@ -21,37 +21,37 @@ ion-title {
   margin-bottom: 20px;
 
   h1 {
-    color: #1e293b;
-    font-size: 26px;
+    color: var(--t-fg-1e293b, #1e293b);
+    font-size: calc(26px * var(--escala-fonte, 1));
     font-weight: 600;
     margin: 0 0 8px;
   }
 
   p {
-    color: #64748b;
-    font-size: 15px;
+    color: var(--t-fg-64748b, #64748b);
+    font-size: calc(15px * var(--escala-fonte, 1));
     line-height: 1.5;
     margin: 0;
   }
 }
 
 .progresso {
-  color: #6964fa;
-  font-size: 14px;
+  color: var(--t-fg-6964fa, #6964fa);
+  font-size: calc(14px * var(--escala-fonte, 1));
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .pergunta-card {
-  background: white;
+  background: var(--t-bg-white, white);
   border-radius: 16px;
   padding: 22px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
 .pergunta-card h2 {
-  color: #1e293b;
-  font-size: 20px;
+  color: var(--t-fg-1e293b, #1e293b);
+  font-size: calc(20px * var(--escala-fonte, 1));
   font-weight: 600;
   line-height: 1.4;
   margin: 0 0 20px;
@@ -67,13 +67,13 @@ ion-title {
   width: 100%;
   padding: 14px 16px;
 
-  border: 2px solid #ceccff;
+  border: 2px solid var(--t-bd-ceccff, #ceccff);
   border-radius: 12px;
 
-  background: white;
-  color: #1e293b;
+  background: var(--t-bg-white, white);
+  color: var(--t-fg-1e293b, #1e293b);
 
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
   text-align: left;
 
   cursor: pointer;
@@ -81,13 +81,13 @@ ion-title {
 }
 
 .alternativa:hover {
-  border-color: #6964fa;
-  background: #f8f8ff;
+  border-color: var(--t-bd-6964fa, #6964fa);
+  background: var(--t-bg-f8f8ff, #f8f8ff);
 }
 
 .alternativa.selecionada {
-  background: #ceccff;
-  border-color: #6964fa;
+  background: var(--t-bg-ceccff, #ceccff);
+  border-color: var(--t-bd-6964fa, #6964fa);
 }
 
 
@@ -107,32 +107,32 @@ ion-title {
 
   margin: 0 auto 16px;
 
-  background: #ceccff;
+  background: var(--t-bg-ceccff, #ceccff);
   border-radius: 50%;
 
   ion-icon {
     font-size: 32px;
-    color: #040094;
+    color: var(--t-fg-040094, #040094);
   }
 }
 
 .resultado h1 {
-  color: #1e293b;
-  font-size: 25px;
+  color: var(--t-fg-1e293b, #1e293b);
+  font-size: calc(25px * var(--escala-fonte, 1));
   font-weight: 600;
   margin: 0 0 10px;
 }
 
 .resultado h2 {
-  color: #040094;
-  font-size: 21px;
+  color: var(--t-fg-040094, #040094);
+  font-size: calc(21px * var(--escala-fonte, 1));
   font-weight: 600;
   margin: 0 0 12px;
 }
 
 .resultado > p {
-  color: #64748b;
-  font-size: 15px;
+  color: var(--t-fg-64748b, #64748b);
+  font-size: calc(15px * var(--escala-fonte, 1));
   line-height: 1.5;
   max-width: 600px;
   margin: 0 auto 24px;
@@ -150,7 +150,7 @@ ion-title {
   align-items: center;
   gap: 12px;
 
-  background: white;
+  background: var(--t-bg-white, white);
   border-radius: 14px;
   padding: 16px;
 
@@ -169,11 +169,11 @@ ion-title {
 
   flex-shrink: 0;
 
-  background: #ceccff;
+  background: var(--t-bg-ceccff, #ceccff);
   border-radius: 10px;
 
   ion-icon {
-    color: #040094;
+    color: var(--t-fg-040094, #040094);
     font-size: 22px;
   }
 }
@@ -184,20 +184,20 @@ ion-title {
 
 .atalho strong {
   display: block;
-  color: #1e293b;
-  font-size: 15px;
+  color: var(--t-fg-1e293b, #1e293b);
+  font-size: calc(15px * var(--escala-fonte, 1));
   margin-bottom: 4px;
 }
 
 .atalho span {
   display: block;
-  color: #64748b;
-  font-size: 13px;
+  color: var(--t-fg-64748b, #64748b);
+  font-size: calc(13px * var(--escala-fonte, 1));
   line-height: 1.4;
 }
 
 .atalho > ion-icon {
-  color: #6964fa;
+  color: var(--t-fg-6964fa, #6964fa);
   font-size: 20px;
 }
 
@@ -209,9 +209,9 @@ ion-title {
   border: none;
   background: transparent;
 
-  color: #6964fa;
+  color: var(--t-fg-6964fa, #6964fa);
 
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
   font-weight: 600;
 
   cursor: pointer;
@@ -229,14 +229,14 @@ ion-title {
   background: #040094;
   color: white;
 
-  font-size: 15px;
+  font-size: calc(15px * var(--escala-fonte, 1));
   font-weight: 600;
 
   text-align: center;
 }
 
 .botao-continuar:disabled {
-  background: #ceccff;
-  color: #64748b;
+  background: var(--t-bg-ceccff, #ceccff);
+  color: var(--t-fg-64748b, #64748b);
   opacity: 1;
 }

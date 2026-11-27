@@ -5,6 +5,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular/lazy';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 
 //importações do SDK Modular do Firebase
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app'; //função para inicializar o app Firebase
@@ -17,7 +18,7 @@ import { provideHttpClient } from '@angular/common/http'; //import pra ia
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AcessibilidadeComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
 
   providers: [

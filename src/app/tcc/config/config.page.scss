@@ -12,7 +12,7 @@ ion-toolbar {
 }
 
 ion-content {
-  --background: #ffffff;
+  --background: var(--t-bg-ffffff, #ffffff);
 }
 
 .config-container {
@@ -27,8 +27,8 @@ ion-content {
 }
 
 .config-section h2 {
-  color: #1E293B;
-  font-size: 18px;
+  color: var(--t-fg-1e293b, #1E293B);
+  font-size: calc(18px * var(--escala-fonte, 1));
   font-weight: 700;
   margin: 0 0 12px 4px;
 }
@@ -38,7 +38,7 @@ ion-content {
 .config-card {
   margin: 0;
   border-radius: 14px;
-  background: #ffffff;
+  background: var(--t-bg-ffffff, #ffffff);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
@@ -51,7 +51,7 @@ ion-content {
   height: 42px;
   margin-right: 14px;
   border-radius: 12px;
-  background: #CECCFF;
+  background: var(--t-bg-ceccff, #CECCFF);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,22 +60,22 @@ ion-content {
 
 .config-icon ion-icon {
   font-size: 22px;
-  color: #040094;
+  color: var(--t-fg-040094, #040094);
 }
 
 /* textos */
 
 ion-label h3 {
   margin: 0 0 4px;
-  color: #1E293B;
-  font-size: 15px;
+  color: var(--t-fg-1e293b, #1E293B);
+  font-size: calc(15px * var(--escala-fonte, 1));
   font-weight: 700;
 }
 
 ion-label p {
   margin: 0;
-  color: #64748B;
-  font-size: 13px;
+  color: var(--t-fg-64748b, #64748B);
+  font-size: calc(13px * var(--escala-fonte, 1));
 }
 
 /* toggle */
@@ -91,7 +91,7 @@ ion-toggle {
 
 .logout-button {
   margin-top: 8px;
-  --color: #040094;
-  --border-color: #040094;
+  --color: var(--t-fg-040094, #040094);
+  --border-color: var(--t-bd-040094, #040094);
   font-weight: 600;
 }

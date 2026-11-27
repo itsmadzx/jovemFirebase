@@ -1,0 +1,217 @@
+/* Cores dos temas escuros. No tema claro valem as cores originais de cada tela. */
+
+html.tema-escuro.ion-palette-dark {
+  --ion-background-color: #000000;
+  --ion-background-color-rgb: 0,0,0;
+  --ion-text-color: #e7e9ea;
+  --ion-text-color-rgb: 231,233,234;
+  --ion-card-background: #16181c;
+  --ion-item-background: #16181c;
+  --ion-toolbar-background: #000000;
+  --ion-tab-bar-background: #16181c;
+  --ion-border-color: #38444d;
+  --ion-color-step-600: #a9b4be;
+  --ion-text-color-step-400: #a9b4be;
+  --t-bd-040094: #5652ff;
+  --t-bd-5a4af3: #30374b;
+  --t-bd-6964fa: #30374b;
+  --t-bd-746cff: #30374b;
+  --t-bd-9c99ff: #30374b;
+  --t-bd-ceccff: #30374b;
+  --t-bd-e2e8f0: #30374b;
+  --t-bd-e4e6f5: #30374b;
+  --t-bd-e5e7eb: #30374b;
+  --t-bd-f1f5f9: #30374b;
+  --t-bg-9997ed: #272647;
+  --t-bg-9ca3af: #2f3658;
+  --t-bg-c5c4ff: #1d1c35;
+  --t-bg-ceccff: #1c1b32;
+  --t-bg-e4e3ff: #18172b;
+  --t-bg-e4e4ff: #17172b;
+  --t-bg-e5e5ff: #17172b;
+  --t-bg-e7e6ff: #18172b;
+  --t-bg-eeeeee: #181c2d;
+  --t-bg-eeeeff: #161628;
+  --t-bg-eef2ff: #161a28;
+  --t-bg-eff0ff: #161728;
+  --t-bg-f1f5f9: #162029;
+  --t-bg-f5f4ff: #000000;
+  --t-bg-f8f8ff: #000000;
+  --t-bg-f8f9ff: #000000;
+  --t-bg-f8fafc: #000000;
+  --t-bg-fafaff: #16181c;
+  --t-bg-fff1f2: #000000;
+  --t-bg-ffffff: #16181c;
+  --t-bg-white: #16181c;
+  --t-fg-040094: #b4b2f9;
+  --t-fg-047857: #b7f9e6;
+  --t-fg-101b9e: #aeb4f7;
+  --t-fg-1022a5: #acb5f7;
+  --t-fg-1022a6: #acb5f7;
+  --t-fg-1222a5: #adb5f6;
+  --t-fg-1223a5: #adb5f6;
+  --t-fg-1427b9: #a8b1f6;
+  --t-fg-1528a5: #adb7f5;
+  --t-fg-1661ae: #abcff4;
+  --t-fg-1725b2: #abb1f4;
+  --t-fg-1728bd: #a8b0f4;
+  --t-fg-1831c4: #a6b2f4;
+  --t-fg-1e293b: #d0d9e7;
+  --t-fg-1f2937: #d2dae6;
+  --t-fg-252b52: #cacee7;
+  --t-fg-2637a8: #b0b8ed;
+  --t-fg-2735c4: #a9afee;
+  --t-fg-333: #d6d7df;
+  --t-fg-374151: #cfd5de;
+  --t-fg-4236ee: #9b95f6;
+  --t-fg-475569: #c9d1db;
+  --t-fg-4838ff: #9991f6;
+  --t-fg-4937ef: #9e94f6;
+  --t-fg-4f46e5: #9e99f1;
+  --t-fg-5061ba: #b0b8e0;
+  --t-fg-5362ae: #b6bcdd;
+  --t-fg-5662a5: #b9bedb;
+  --t-fg-5965a9: #b8bdda;
+  --t-fg-5969bd: #afb6df;
+  --t-fg-5b21b6: #c6acf0;
+  --t-fg-64748b: #c3cad4;
+  --t-fg-6874ad: #b6bcd8;
+  --t-fg-6964fa: #8c89f5;
+  --t-fg-6b7280: #c5c7d2;
+  --t-fg-9aa2c5: #aeb4d0;
+  --t-fg-9ca3af: #babcc9;
+  --t-fg-b91c1c: #f2aaaa;
+  --t-fg-dc2626: #f0a2a2;
+  --t-fg-e31d3b: #f3a0ac;
+  --t-fg-e5233b: #f39da8;
+}
+
+html.tema-penumbra.ion-palette-dark {
+  --ion-background-color: #15202b;
+  --ion-background-color-rgb: 21,32,43;
+  --ion-text-color: #e7e9ea;
+  --ion-text-color-rgb: 231,233,234;
+  --ion-card-background: #1e2c3a;
+  --ion-item-background: #1e2c3a;
+  --ion-toolbar-background: #15202b;
+  --ion-tab-bar-background: #1e2c3a;
+  --ion-border-color: #38444d;
+  --ion-color-step-600: #a9b4be;
+  --ion-text-color-step-400: #a9b4be;
+  --t-bd-040094: #5652ff;
+  --t-bd-5a4af3: #404a64;
+  --t-bd-6964fa: #404a64;
+  --t-bd-746cff: #404a64;
+  --t-bd-9c99ff: #404a64;
+  --t-bd-ceccff: #404a64;
+  --t-bd-e2e8f0: #404a64;
+  --t-bd-e4e6f5: #404a64;
+  --t-bd-e5e7eb: #404a64;
+  --t-bd-f1f5f9: #404a64;
+  --t-bg-9997ed: #363562;
+  --t-bg-9ca3af: #3d4672;
+  --t-bg-c5c4ff: #2b2b4f;
+  --t-bg-ceccff: #2b294d;
+  --t-bg-e4e3ff: #272646;
+  --t-bg-e4e4ff: #262646;
+  --t-bg-e5e5ff: #252545;
+  --t-bg-e7e6ff: #272545;
+  --t-bg-eeeeee: #272c48;
+  --t-bg-eeeeff: #242443;
+  --t-bg-eef2ff: #242b43;
+  --t-bg-eff0ff: #242643;
+  --t-bg-f1f5f9: #243444;
+  --t-bg-f5f4ff: #15202b;
+  --t-bg-f8f8ff: #15202b;
+  --t-bg-f8f9ff: #15202b;
+  --t-bg-f8fafc: #15202b;
+  --t-bg-fafaff: #1e2c3a;
+  --t-bg-fff1f2: #15202b;
+  --t-bg-ffffff: #1e2c3a;
+  --t-bg-white: #1e2c3a;
+  --t-fg-040094: #b4b2f9;
+  --t-fg-047857: #b7f9e6;
+  --t-fg-101b9e: #aeb4f7;
+  --t-fg-1022a5: #acb5f7;
+  --t-fg-1022a6: #acb5f7;
+  --t-fg-1222a5: #adb5f6;
+  --t-fg-1223a5: #adb5f6;
+  --t-fg-1427b9: #a8b1f6;
+  --t-fg-1528a5: #adb7f5;
+  --t-fg-1661ae: #abcff4;
+  --t-fg-1725b2: #abb1f4;
+  --t-fg-1728bd: #a8b0f4;
+  --t-fg-1831c4: #a6b2f4;
+  --t-fg-1e293b: #d0d9e7;
+  --t-fg-1f2937: #d2dae6;
+  --t-fg-252b52: #cacee7;
+  --t-fg-2637a8: #b0b8ed;
+  --t-fg-2735c4: #a9afee;
+  --t-fg-333: #d6d7df;
+  --t-fg-374151: #cfd5de;
+  --t-fg-4236ee: #9b95f6;
+  --t-fg-475569: #c9d1db;
+  --t-fg-4838ff: #9991f6;
+  --t-fg-4937ef: #9e94f6;
+  --t-fg-4f46e5: #9e99f1;
+  --t-fg-5061ba: #b0b8e0;
+  --t-fg-5362ae: #b6bcdd;
+  --t-fg-5662a5: #b9bedb;
+  --t-fg-5965a9: #b8bdda;
+  --t-fg-5969bd: #afb6df;
+  --t-fg-5b21b6: #c6acf0;
+  --t-fg-64748b: #c3cad4;
+  --t-fg-6874ad: #b6bcd8;
+  --t-fg-6964fa: #8c89f5;
+  --t-fg-6b7280: #c5c7d2;
+  --t-fg-9aa2c5: #aeb4d0;
+  --t-fg-9ca3af: #babcc9;
+  --t-fg-b91c1c: #f2aaaa;
+  --t-fg-dc2626: #f0a2a2;
+  --t-fg-e31d3b: #f3a0ac;
+  --t-fg-e5233b: #f39da8;
+}
+
+/* Campos e botões sem cor definida acompanham o texto do tema */
+html.ion-palette-dark :where(button, input, textarea, select) {
+  color: inherit;
+}
+
+html.ion-palette-dark ion-card-title,
+html.ion-palette-dark ion-card-subtitle {
+  color: var(--ion-text-color);
+}
+
+html.ion-palette-dark .ion-page .dots button:not(.active) {
+  background: #8b93b8;
+}
+
+/* Tamanho da letra: textos do Ionic (rem) */
+html {
+  font-size: calc(100% * var(--escala-fonte, 1));
+}
+
+/* Caixas de altura fixa crescem junto com a letra */
+html.letra-grande .ion-page :is(.shortcut, .banner) {
+  height: auto;
+  min-height: 160px;
+}
+
+html.letra-grande .ion-page .shortcuts {
+  grid-template-columns: repeat(auto-fit, minmax(calc(150px * var(--escala-fonte, 1)), 1fr));
+}
+
+html.letra-grande .ion-page .recommended {
+  padding-bottom: 160px;
+}
+
+html.ion-palette-dark .ion-page .botao-refazer {
+  background: transparent;
+  border: 2px solid #8b93b8;
+}
+
+/* Com letra grande, títulos e links passam para a linha de baixo */
+html.letra-grande .ion-page .recommended-header {
+  flex-wrap: wrap;
+  gap: 8px;
+}

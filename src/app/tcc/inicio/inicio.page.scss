@@ -1,7 +1,7 @@
 /* BASE */
 
 ion-content {
-  --background: #f8f9ff;
+  --background: var(--t-bg-f8f9ff, #f8f9ff);
 }
 
 * {
@@ -60,16 +60,16 @@ ion-content {
 
   flex-shrink: 0;
 
-  background: #eeeeee;
+  background: var(--t-bg-eeeeee, #eeeeee);
 
-  border: 4px solid #746cff;
+  border: 4px solid var(--t-bd-746cff, #746cff);
   border-radius: 50%;
 }
 
 .profile-photo span {
-  color: #2735c4;
+  color: var(--t-fg-2735c4, #2735c4);
 
-  font-size: 32px;
+  font-size: calc(32px * var(--escala-fonte, 1));
   font-weight: 700;
 }
 
@@ -77,7 +77,7 @@ ion-content {
   width: 58%;
   height: 58%;
 
-  color: #2735c4;
+  color: var(--t-fg-2735c4, #2735c4);
 }
 
 .welcome {
@@ -87,11 +87,11 @@ ion-content {
 }
 
 .welcome span {
-  font-size: 26px;
+  font-size: calc(26px * var(--escala-fonte, 1));
 }
 
 .welcome strong {
-  font-size: 36px;
+  font-size: calc(36px * var(--escala-fonte, 1));
   font-weight: 700;
 }
 
@@ -133,7 +133,7 @@ ion-content {
   display: flex;
   align-items: center;
 
-  background: white;
+  background: var(--t-bg-white, white);
 
   border-radius: 45px;
 
@@ -141,7 +141,7 @@ ion-content {
 }
 
 .search-box ion-icon {
-  color: #5965a9;
+  color: var(--t-fg-5965a9, #5965a9);
   font-size: 38px;
 }
 
@@ -155,13 +155,13 @@ ion-content {
 
   background: transparent;
 
-  color: #333;
+  color: var(--t-fg-333, #333);
 
-  font-size: 20px;
+  font-size: calc(20px * var(--escala-fonte, 1));
 }
 
 .search-box input::placeholder {
-  color: #5965a9;
+  color: var(--t-fg-5965a9, #5965a9);
 }
 
 /* ATALHOS */
@@ -190,8 +190,8 @@ ion-content {
   border: none;
   border-radius: 28px;
 
-  background: #eff0ff;
-  color: #101b9e;
+  background: var(--t-bg-eff0ff, #eff0ff);
+  color: var(--t-fg-101b9e, #101b9e);
 
   text-align: center;
 
@@ -210,8 +210,8 @@ ion-content {
 
   background: linear-gradient(
     145deg,
-    #746cff,
-    #4434e9
+    var(--t-bg-746cff, #746cff),
+    var(--t-bg-4434e9, #4434e9)
   );
 
   color: white;
@@ -227,7 +227,7 @@ ion-content {
 }
 
 .shortcut strong {
-  font-size: 20px;
+  font-size: calc(20px * var(--escala-fonte, 1));
   line-height: 1.25;
 }
 
@@ -248,8 +248,8 @@ ion-content {
 
   background: linear-gradient(
     100deg,
-    #e4e3ff,
-    #c5c4ff
+    var(--t-bg-e4e3ff, #e4e3ff),
+    var(--t-bg-c5c4ff, #c5c4ff)
   );
 }
 
@@ -265,18 +265,18 @@ ion-content {
 .banner-text h1 {
   margin: 0;
 
-  color: #1223a5;
+  color: var(--t-fg-1223a5, #1223a5);
 
-  font-size: 34px;
+  font-size: calc(34px * var(--escala-fonte, 1));
   line-height: 1.15;
 }
 
 .banner-text p {
   margin: 25px 0;
 
-  color: #5061ba;
+  color: var(--t-fg-5061ba, #5061ba);
 
-  font-size: 18px;
+  font-size: calc(18px * var(--escala-fonte, 1));
   line-height: 1.5;
 }
 
@@ -293,13 +293,13 @@ ion-content {
 
   background: linear-gradient(
     90deg,
-    #4937ef,
-    #543fff
+    var(--t-bg-4937ef, #4937ef),
+    var(--t-bg-543fff, #543fff)
   );
 
   color: white;
 
-  font-size: 17px;
+  font-size: calc(17px * var(--escala-fonte, 1));
   font-weight: bold;
 
   cursor: pointer;
@@ -314,8 +314,8 @@ ion-content {
 
   background: linear-gradient(
     135deg,
-    #c5c4ff,
-    #9997ed
+    var(--t-bg-c5c4ff, #c5c4ff),
+    var(--t-bg-9997ed, #9997ed)
   );
 
   border-radius: 50% 0 0 50%;
@@ -324,7 +324,7 @@ ion-content {
 .fake-person {
   margin-bottom: -10px;
 
-  font-size: 180px;
+  font-size: calc(180px * var(--escala-fonte, 1));
 }
 
 .dots {
@@ -350,13 +350,13 @@ ion-content {
   border: none;
   border-radius: 50%;
 
-  background: white;
+  background: var(--t-bg-white, white);
 
   cursor: pointer;
 }
 
 .dots button.active {
-  background: #4434ef;
+  background: var(--t-bg-4434ef, #4434ef);
 }
 
 /* RECOMENDADOS */
@@ -378,9 +378,9 @@ ion-content {
 .recommended-header h2 {
   margin: 0;
 
-  color: #1528a5;
+  color: var(--t-fg-1528a5, #1528a5);
 
-  font-size: 30px;
+  font-size: calc(30px * var(--escala-fonte, 1));
   font-weight: 600;
 }
 
@@ -395,9 +395,9 @@ ion-content {
   border: none;
   background: transparent;
 
-  color: #4838ff;
+  color: var(--t-fg-4838ff, #4838ff);
 
-  font-size: 25px;
+  font-size: calc(25px * var(--escala-fonte, 1));
   font-weight: 500;
 
   cursor: pointer;
@@ -428,11 +428,11 @@ ion-content {
 
   border-radius: 50%;
 
-  background: #e4e4ff;
+  background: var(--t-bg-e4e4ff, #e4e4ff);
 }
 
 .category-icon ion-icon {
-  color: #1831c4;
+  color: var(--t-fg-1831c4, #1831c4);
 
   font-size: 40px;
 }
@@ -440,9 +440,9 @@ ion-content {
 .category-title h3 {
   margin: 0;
 
-  color: #1831c4;
+  color: var(--t-fg-1831c4, #1831c4);
 
-  font-size: 25px;
+  font-size: calc(25px * var(--escala-fonte, 1));
   font-weight: bold;
 }
 
@@ -462,8 +462,8 @@ ion-content {
   border: none;
   border-radius: 30px;
 
-  background: #eeeeff;
-  color: #1528a5;
+  background: var(--t-bg-eeeeff, #eeeeff);
+  color: var(--t-fg-1528a5, #1528a5);
 
   text-align: left;
 
@@ -499,15 +499,15 @@ ion-content {
 
   border-radius: 25px;
 
-  background: white;
+  background: var(--t-bg-white, white);
 
-  color: #e31d3b;
+  color: var(--t-fg-e31d3b, #e31d3b);
 
-  font-size: 27px;
+  font-size: calc(27px * var(--escala-fonte, 1));
 }
 
 .company-logo strong {
-  font-size: 32px;
+  font-size: calc(32px * var(--escala-fonte, 1));
 }
 
 /* Informações */
@@ -521,9 +521,9 @@ ion-content {
 .course-info h4 {
   margin: 0 0 20px;
 
-  color: #1528a5;
+  color: var(--t-fg-1528a5, #1528a5);
 
-  font-size: 28px;
+  font-size: calc(28px * var(--escala-fonte, 1));
   font-weight: 500;
 }
 
@@ -542,9 +542,9 @@ ion-content {
 
   gap: 8px;
 
-  color: #5969bd;
+  color: var(--t-fg-5969bd, #5969bd);
 
-  font-size: 22px;
+  font-size: calc(22px * var(--escala-fonte, 1));
 }
 
 .course-details ion-icon {
@@ -556,13 +556,13 @@ ion-content {
 
   margin-right: 15px;
 
-  color: #1831c4;
+  color: var(--t-fg-1831c4, #1831c4);
 
-  font-size: 45px;
+  font-size: calc(45px * var(--escala-fonte, 1));
 }
 
 .vaga-logo {
-  color: #1661ae;
+  color: var(--t-fg-1661ae, #1661ae);
 }
 
 /* ACESSIBILIDADE */
@@ -584,7 +584,7 @@ ion-content {
   border: none;
   border-radius: 50%;
 
-  background: #4534ee;
+  background: var(--t-bg-4534ee, #4534ee);
   color: white;
 
   box-shadow: 0 8px 20px rgba(45, 35, 200, 0.35);
@@ -614,7 +614,7 @@ ion-content {
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
 
-  background: white;
+  background: var(--t-bg-white, white);
 
   border-radius: 30px 30px 0 0;
 
@@ -633,7 +633,7 @@ ion-content {
 
   gap: 5px;
 
-  color: #5662a5;
+  color: var(--t-fg-5662a5, #5662a5);
 
   cursor: pointer;
 }
@@ -643,11 +643,11 @@ ion-content {
 }
 
 .bottom-item span {
-  font-size: 15px;
+  font-size: calc(15px * var(--escala-fonte, 1));
 }
 
 .bottom-item.active {
-  color: #1728bd;
+  color: var(--t-fg-1728bd, #1728bd);
 
   font-weight: bold;
 }
@@ -664,7 +664,7 @@ ion-content {
 
   border-radius: 10px;
 
-  background: #4134ef;
+  background: var(--t-bg-4134ef, #4134ef);
 }
 
 /* PAINEL DE NOTIFICAÇÕES */
@@ -703,7 +703,7 @@ ion-content {
   display: flex;
   flex-direction: column;
 
-  background: #f8f9ff;
+  background: var(--t-bg-f8f9ff, #f8f9ff);
 
   box-shadow: -8px 0 30px rgba(30, 35, 120, 0.15);
 
@@ -736,7 +736,7 @@ ion-content {
 .notification-header h2 {
   margin: 0;
 
-  font-size: 25px;
+  font-size: calc(25px * var(--escala-fonte, 1));
   font-weight: 700;
 }
 
@@ -781,7 +781,7 @@ ion-content {
   padding: 18px;
   margin-bottom: 12px;
 
-  background: white;
+  background: var(--t-bg-white, white);
 
   border-radius: 20px;
 
@@ -800,8 +800,8 @@ ion-content {
 
   border-radius: 50%;
 
-  background: #e7e6ff;
-  color: #4937ef;
+  background: var(--t-bg-e7e6ff, #e7e6ff);
+  color: var(--t-fg-4937ef, #4937ef);
 }
 
 .notification-icon ion-icon {
@@ -818,24 +818,24 @@ ion-content {
 
   margin-bottom: 5px;
 
-  color: #1528a5;
+  color: var(--t-fg-1528a5, #1528a5);
 
-  font-size: 16px;
+  font-size: calc(16px * var(--escala-fonte, 1));
 }
 
 .notification-text p {
   margin: 0 0 8px;
 
-  color: #6874ad;
+  color: var(--t-fg-6874ad, #6874ad);
 
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
   line-height: 1.4;
 }
 
 .notification-text span {
-  color: #9aa2c5;
+  color: var(--t-fg-9aa2c5, #9aa2c5);
 
-  font-size: 12px;
+  font-size: calc(12px * var(--escala-fonte, 1));
 }
 
 /* COMPUTADOR: textos do menu inferior mais legíveis */
@@ -843,7 +843,7 @@ ion-content {
 @media (min-width: 769px) {
 
   .bottom-item span {
-    font-size: 17px;
+    font-size: calc(17px * var(--escala-fonte, 1));
   }
 
 }
@@ -874,7 +874,7 @@ ion-content {
   }
 
   .profile-photo span {
-    font-size: 24px;
+    font-size: calc(24px * var(--escala-fonte, 1));
   }
 
   .welcome {
@@ -882,11 +882,11 @@ ion-content {
   }
 
   .welcome span {
-    font-size: 17px;
+    font-size: calc(17px * var(--escala-fonte, 1));
   }
 
   .welcome strong {
-    font-size: 26px;
+    font-size: calc(26px * var(--escala-fonte, 1));
     line-height: 1.05;
   }
 
@@ -922,7 +922,7 @@ ion-content {
 
     margin-left: 12px;
 
-    font-size: 15px;
+    font-size: calc(15px * var(--escala-fonte, 1));
   }
 
   /* ---------- Atalhos ---------- */
@@ -974,7 +974,7 @@ ion-content {
   }
 
   .shortcut strong {
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-fonte, 1));
     line-height: 1.2;
   }
 
@@ -995,14 +995,14 @@ ion-content {
   }
 
   .banner-text h1 {
-    font-size: 24px;
+    font-size: calc(24px * var(--escala-fonte, 1));
     line-height: 1.15;
   }
 
   .banner-text p {
     margin: 14px 0;
 
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-fonte, 1));
     line-height: 1.35;
   }
 
@@ -1011,7 +1011,7 @@ ion-content {
 
     gap: 8px;
 
-    font-size: 12px;
+    font-size: calc(12px * var(--escala-fonte, 1));
 
     white-space: nowrap;
   }
@@ -1037,7 +1037,7 @@ ion-content {
   .fake-person {
     margin: 0;
 
-    font-size: 90px;
+    font-size: calc(90px * var(--escala-fonte, 1));
 
     transform: translateX(-5px);
   }
@@ -1073,7 +1073,7 @@ ion-content {
   .recommended-header h2 {
     max-width: 210px;
 
-    font-size: 25px;
+    font-size: calc(25px * var(--escala-fonte, 1));
     line-height: 1.1;
   }
 
@@ -1084,7 +1084,7 @@ ion-content {
 
     gap: 4px;
 
-    font-size: 17px;
+    font-size: calc(17px * var(--escala-fonte, 1));
   }
 
   .see-more ion-icon {
@@ -1109,7 +1109,7 @@ ion-content {
   }
 
   .category-title h3 {
-    font-size: 20px;
+    font-size: calc(20px * var(--escala-fonte, 1));
   }
 
   /* ---------- Cards ---------- */
@@ -1134,11 +1134,11 @@ ion-content {
 
     border-radius: 16px;
 
-    font-size: 18px;
+    font-size: calc(18px * var(--escala-fonte, 1));
   }
 
   .recommendation-card .company-logo strong {
-    font-size: 22px;
+    font-size: calc(22px * var(--escala-fonte, 1));
   }
 
   .course-info {
@@ -1150,7 +1150,7 @@ ion-content {
   .course-info h4 {
     margin-bottom: 12px;
 
-    font-size: 18px;
+    font-size: calc(18px * var(--escala-fonte, 1));
     line-height: 1.2;
 
     display: -webkit-box;
@@ -1168,7 +1168,7 @@ ion-content {
   .course-details span {
     gap: 4px;
 
-    font-size: 13px;
+    font-size: calc(13px * var(--escala-fonte, 1));
 
     white-space: nowrap;
   }
@@ -1180,15 +1180,15 @@ ion-content {
   .card-arrow {
     margin-right: 0;
 
-    font-size: 27px;
+    font-size: calc(27px * var(--escala-fonte, 1));
   }
 
   .vaga-logo {
-    font-size: 24px;
+    font-size: calc(24px * var(--escala-fonte, 1));
   }
 
   .vaga-logo strong {
-    font-size: 28px;
+    font-size: calc(28px * var(--escala-fonte, 1));
   }
 
   /* ---------- Acessibilidade ---------- */
@@ -1228,7 +1228,7 @@ ion-content {
   }
 
   .bottom-item span {
-    font-size: 11px;
+    font-size: calc(11px * var(--escala-fonte, 1));
   }
 
   .bottom-item.active::after {
@@ -1250,7 +1250,7 @@ ion-content {
   }
 
   .notification-header h2 {
-    font-size: 22px;
+    font-size: calc(22px * var(--escala-fonte, 1));
   }
 
   .notification-content {

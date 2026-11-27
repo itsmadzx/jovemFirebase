@@ -6,7 +6,7 @@
     border: none;
     background: transparent;
     padding: 3px;
-    color: #4937ef;
+    color: var(--t-fg-4937ef, #4937ef);
     font-weight: 600;
     cursor: pointer;
   }
@@ -15,13 +15,13 @@
 .erro,
 .aviso {
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
 }
 
 .erro {
-  color: #b91c1c;
+  color: var(--t-fg-b91c1c, #b91c1c);
 }
 
 .aviso {
-  color: #047857;
+  color: var(--t-fg-047857, #047857);
 }

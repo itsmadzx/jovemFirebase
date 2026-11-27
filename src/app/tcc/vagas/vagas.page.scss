@@ -1,5 +1,5 @@
 ion-content {
-  --background: #f8f8ff;
+  --background: var(--t-bg-f8f8ff, #f8f8ff);
 }
 
 ion-toolbar {
@@ -21,25 +21,25 @@ ion-title {
   margin-bottom: 18px;
 
   h1 {
-    color: #1e293b;
-    font-size: 26px;
+    color: var(--t-fg-1e293b, #1e293b);
+    font-size: calc(26px * var(--escala-fonte, 1));
     font-weight: 600;
     margin: 0 0 8px;
   }
 
   p {
-    color: #64748b;
-    font-size: 15px;
+    color: var(--t-fg-64748b, #64748b);
+    font-size: calc(15px * var(--escala-fonte, 1));
     margin: 0;
     line-height: 1.5;
   }
 }
 
 ion-searchbar {
-  --background: white;
+  --background: var(--t-bg-white, white);
   --border-radius: 12px;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --color: #1e293b;
+  --color: var(--t-fg-1e293b, #1e293b);
   --placeholder-color: #64748b;
 
   padding: 0;
@@ -53,22 +53,22 @@ ion-searchbar {
 }
 
 .plataforma-card {
-  background: white;
+  background: var(--t-bg-white, white);
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
 .plataforma-card h2 {
-  color: #1e293b;
-  font-size: 19px;
+  color: var(--t-fg-1e293b, #1e293b);
+  font-size: calc(19px * var(--escala-fonte, 1));
   margin: 0 0 8px;
   font-weight: 600;
 }
 
 .plataforma-card p {
-  color: #64748b;
-  font-size: 14px;
+  color: var(--t-fg-64748b, #64748b);
+  font-size: calc(14px * var(--escala-fonte, 1));
   line-height: 1.5;
   margin: 0 0 16px;
 }
@@ -83,7 +83,7 @@ ion-searchbar {
 
   border-radius: 10px;
 
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
   font-weight: 600;
 
   text-decoration: none;
@@ -96,20 +96,20 @@ ion-searchbar {
 .sem-resultados {
   text-align: center;
   padding: 50px 20px;
-  color: #64748b;
+  color: var(--t-fg-64748b, #64748b);
 
   ion-icon {
     font-size: 45px;
-    color: #6964fa;
+    color: var(--t-fg-6964fa, #6964fa);
   }
 
   h2 {
-    color: #1e293b;
-    font-size: 19px;
+    color: var(--t-fg-1e293b, #1e293b);
+    font-size: calc(19px * var(--escala-fonte, 1));
   }
 
   p {
-    font-size: 14px;
+    font-size: calc(14px * var(--escala-fonte, 1));
   }
 }
 

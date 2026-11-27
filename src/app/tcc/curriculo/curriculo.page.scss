@@ -3,7 +3,7 @@ BASE
 ========================= */
 
 ion-content {
---background: #f8f9ff;
+--background: var(--t-bg-f8f9ff, #f8f9ff);
 }
 
 * {
@@ -22,7 +22,7 @@ ion-toolbar {
 min-height: 64px;
 
 ion-title {
-font-size: 18px;
+font-size: calc(18px * var(--escala-fonte, 1));
 font-weight: 700;
 }
 
@@ -72,7 +72,7 @@ height: 58px;
 
 border-radius: 16px;
 
-background: #CECCFF;
+background: var(--t-bg-ceccff, #CECCFF);
 
 display: flex;
 align-items: center;
@@ -85,14 +85,14 @@ flex-shrink: 0;
 
 font-size: 30px;
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 }
 
 .header-text span {
 
-color: #6964FA;
+color: var(--t-fg-6964fa, #6964FA);
 
-font-size: 11px;
+font-size: calc(11px * var(--escala-fonte, 1));
 
 font-weight: 800;
 
@@ -103,9 +103,9 @@ letter-spacing: 1.2px;
 
 margin: 3px 0 4px;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 28px;
+font-size: calc(28px * var(--escala-fonte, 1));
 
 font-weight: 700;
 }
@@ -114,9 +114,9 @@ font-weight: 700;
 
 margin: 0;
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 14px;
+font-size: calc(14px * var(--escala-fonte, 1));
 }
 
 /* =========================
@@ -151,9 +151,9 @@ gap: 14px;
 
 .form-section {
 
-background: #ffffff;
+background: var(--t-bg-ffffff, #ffffff);
 
-border: 1px solid #E2E8F0;
+border: 1px solid var(--t-bd-e2e8f0, #E2E8F0);
 
 border-radius: 16px;
 
@@ -184,7 +184,7 @@ height: 44px;
 
 border-radius: 12px;
 
-background: #CECCFF;
+background: var(--t-bg-ceccff, #CECCFF);
 
 display: flex;
 
@@ -197,7 +197,7 @@ flex-shrink: 0;
 
 .section-icon ion-icon {
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
 font-size: 23px;
 }
@@ -206,9 +206,9 @@ font-size: 23px;
 
 margin: 0;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 17px;
+font-size: calc(17px * var(--escala-fonte, 1));
 
 font-weight: 700;
 }
@@ -217,9 +217,9 @@ font-weight: 700;
 
 margin: 3px 0 0;
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 13px;
+font-size: calc(13px * var(--escala-fonte, 1));
 
 line-height: 1.4;
 }
@@ -255,18 +255,18 @@ gap: 14px;
 
 .field ion-label {
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 13px;
+font-size: calc(13px * var(--escala-fonte, 1));
 
 font-weight: 600;
 }
 
 .field small {
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 11px;
+font-size: calc(11px * var(--escala-fonte, 1));
 }
 
 /* =========================
@@ -277,9 +277,9 @@ ion-input,
 ion-textarea,
 ion-select {
 
---background: #F8FAFC;
+--background: var(--t-bg-f8fafc, #F8FAFC);
 
---border-color: #E2E8F0;
+--border-color: var(--t-bd-e2e8f0, #E2E8F0);
 
 --border-radius: 10px;
 
@@ -289,9 +289,9 @@ ion-select {
 
 --padding-end: 13px;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 14px;
+font-size: calc(14px * var(--escala-fonte, 1));
 }
 
 /* =========================
@@ -304,9 +304,9 @@ padding: 16px;
 
 margin-bottom: 15px;
 
-background: #F8FAFC;
+background: var(--t-bg-f8fafc, #F8FAFC);
 
-border: 1px solid #E2E8F0;
+border: 1px solid var(--t-bd-e2e8f0, #E2E8F0);
 
 border-radius: 13px;
 }
@@ -326,9 +326,9 @@ margin-bottom: 16px;
 
 flex: 1;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 14px;
+font-size: calc(14px * var(--escala-fonte, 1));
 
 font-weight: 700;
 }
@@ -340,9 +340,9 @@ height: 30px;
 
 border-radius: 9px;
 
-background: #CECCFF;
+background: var(--t-bg-ceccff, #CECCFF);
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
 display: flex;
 
@@ -350,7 +350,7 @@ align-items: center;
 
 justify-content: center;
 
-font-size: 12px;
+font-size: calc(12px * var(--escala-fonte, 1));
 
 font-weight: 700;
 }
@@ -364,9 +364,9 @@ border: none;
 
 border-radius: 9px;
 
-background: #FFF1F2;
+background: var(--t-bg-fff1f2, #FFF1F2);
 
-color: #DC2626;
+color: var(--t-fg-dc2626, #DC2626);
 
 display: flex;
 
@@ -402,15 +402,15 @@ gap: 7px;
 
 padding: 10px 15px;
 
-background: #ffffff;
+background: var(--t-bg-ffffff, #ffffff);
 
-border: 1.5px dashed #6964FA;
+border: 1.5px dashed var(--t-bd-6964fa, #6964FA);
 
 border-radius: 10px;
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
-font-size: 13px;
+font-size: calc(13px * var(--escala-fonte, 1));
 
 font-weight: 650;
 
@@ -421,7 +421,7 @@ transition: 0.2s ease;
 
 .add-button:hover {
 
-background: #F5F4FF;
+background: var(--t-bg-f5f4ff, #F5F4FF);
 }
 
 .add-button ion-icon {
@@ -442,11 +442,11 @@ padding: 5px 0 0;
 
 margin: 0 0 12px;
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
 text-align: center;
 
-font-size: 12px;
+font-size: calc(12px * var(--escala-fonte, 1));
 }
 
 .main-save-button {
@@ -494,9 +494,9 @@ margin-bottom: 14px;
 
 .preview-heading span {
 
-color: #6964FA;
+color: var(--t-fg-6964fa, #6964FA);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 font-weight: 800;
 
@@ -507,9 +507,9 @@ letter-spacing: 1px;
 
 margin: 3px 0 0;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 19px;
+font-size: calc(19px * var(--escala-fonte, 1));
 
 font-weight: 700;
 }
@@ -524,13 +524,13 @@ gap: 5px;
 
 padding: 7px 10px;
 
-background: #CECCFF;
+background: var(--t-bg-ceccff, #CECCFF);
 
 border-radius: 8px;
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 font-weight: 600;
 
@@ -554,9 +554,9 @@ min-height: 800px;
 
 padding: 40px 38px;
 
-background: #ffffff;
+background: var(--t-bg-ffffff, #ffffff);
 
-border: 1px solid #E2E8F0;
+border: 1px solid var(--t-bd-e2e8f0, #E2E8F0);
 
 border-radius: 4px;
 
@@ -572,16 +572,16 @@ CABEÇALHO DO CURRÍCULO
 
 padding-bottom: 20px;
 
-border-bottom: 2px solid #040094;
+border-bottom: 2px solid var(--t-bd-040094, #040094);
 }
 
 .resume-header h1 {
 
 margin: 0 0 7px;
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 27px;
+font-size: calc(27px * var(--escala-fonte, 1));
 
 font-weight: 750;
 
@@ -605,16 +605,16 @@ align-items: center;
 
 gap: 4px;
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 word-break: break-word;
 }
 
 .resume-contact ion-icon {
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
 font-size: 13px;
 }
@@ -632,9 +632,9 @@ margin-top: 22px;
 
 margin: 0 0 8px;
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 font-weight: 800;
 
@@ -647,9 +647,9 @@ letter-spacing: 0.8px;
 
 margin: 0;
 
-color: #475569;
+color: var(--t-fg-475569, #475569);
 
-font-size: 11px;
+font-size: calc(11px * var(--escala-fonte, 1));
 
 line-height: 1.6;
 
@@ -671,9 +671,9 @@ gap: 3px;
 
 .resume-entry strong {
 
-color: #1E293B;
+color: var(--t-fg-1e293b, #1E293B);
 
-font-size: 12px;
+font-size: calc(12px * var(--escala-fonte, 1));
 
 font-weight: 700;
 
@@ -682,27 +682,27 @@ word-break: break-word;
 
 .resume-entry span {
 
-color: #475569;
+color: var(--t-fg-475569, #475569);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 word-break: break-word;
 }
 
 .resume-entry small {
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 9px;
+font-size: calc(9px * var(--escala-fonte, 1));
 }
 
 .resume-entry p {
 
 margin: 4px 0 0;
 
-color: #64748B;
+color: var(--t-fg-64748b, #64748B);
 
-font-size: 10px;
+font-size: calc(10px * var(--escala-fonte, 1));
 
 line-height: 1.5;
 }
@@ -724,13 +724,13 @@ gap: 6px;
 
 padding: 5px 8px;
 
-background: #CECCFF;
+background: var(--t-bg-ceccff, #CECCFF);
 
 border-radius: 6px;
 
-color: #040094;
+color: var(--t-fg-040094, #040094);
 
-font-size: 9px;
+font-size: calc(9px * var(--escala-fonte, 1));
 
 font-weight: 600;
 
@@ -817,7 +817,7 @@ min-height: 58px;
 
 ion-title {
 
-font-size: 16px !important;
+font-size: calc(16px * var(--escala-fonte, 1)) !important;
 
 }
 
@@ -864,12 +864,12 @@ font-size: 25px;
 }
 
 .header-text h1 {
-font-size: 23px;
+font-size: calc(23px * var(--escala-fonte, 1));
 }
 
 .header-text p {
 
-font-size: 12px;
+font-size: calc(12px * var(--escala-fonte, 1));
 
 line-height: 1.5;
 
@@ -905,12 +905,12 @@ font-size: 21px;
 
 .section-title h2 {
 
-font-size: 16px;
+font-size: calc(16px * var(--escala-fonte, 1));
 
 }
 
 .section-title p {
-font-size: 12px;
+font-size: calc(12px * var(--escala-fonte, 1));
 }
 
 /* CAMPOS */
@@ -961,7 +961,7 @@ border-radius: 3px;
 }
 
 .resume-header h1 {
-font-size: 23px;
+font-size: calc(23px * var(--escala-fonte, 1));
 }
 
 .resume-contact {
@@ -1008,7 +1008,7 @@ padding: 23px 17px;
 }
 
 .header-text h1 {
-font-size: 21px;
+font-size: calc(21px * var(--escala-fonte, 1));
 }
 
 }
@@ -1018,19 +1018,19 @@ font-size: 21px;
 
   margin-top: -2px;
 
-  color: #dc2626;
+  color: var(--t-fg-dc2626, #dc2626);
 
-  font-size: 12px;
+  font-size: calc(12px * var(--escala-fonte, 1));
   line-height: 1.4;
 }
 
 .custom-select {
   width: 100%;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--t-bd-e2e8f0, #e2e8f0);
   border-radius: 10px;
 
-  background: #ffffff;
+  background: var(--t-bg-ffffff, #ffffff);
 
   overflow: hidden;
 }
@@ -1041,23 +1041,23 @@ font-size: 21px;
   --padding-start: 14px;
   --padding-end: 14px;
 
-  --color: #1e293b;
+  --color: var(--t-fg-1e293b, #1e293b);
   --placeholder-color: #94a3b8;
 
   min-height: 48px;
 
-  font-size: 14px;
+  font-size: calc(14px * var(--escala-fonte, 1));
 }
 
 .custom-select ion-select::part(icon) {
-  color: #64748b;
+  color: var(--t-fg-64748b, #64748b);
 }
 
 .empty-list {
   margin: -3px 0 15px;
 
-  color: #64748b;
+  color: var(--t-fg-64748b, #64748b);
 
-  font-size: 12px;
+  font-size: calc(12px * var(--escala-fonte, 1));
   line-height: 1.4;
 }

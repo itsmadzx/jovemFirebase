@@ -34,7 +34,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": ["src/global.scss", "src/theme/variables.scss", "src/theme/preferencias.scss"],
             "scripts": []
           },
           "configurations": {
@@ -47,8 +47,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "16kb",
-                  "maximumError": "24kb"
+                  "maximumWarning": "30kb",
+                  "maximumError": "48kb"
                 }
               ],
               "fileReplacements": [

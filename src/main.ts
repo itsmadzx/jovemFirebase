@@ -29,7 +29,17 @@ import {
   mailOutline,
   callOutline,
   checkmarkCircleOutline,
-  bookOutline
+  bookOutline,
+  closeOutline,
+  eyeOffOutline,
+  informationCircleOutline,
+  lockClosedOutline,
+  logOutOutline,
+  notificationsOffOutline,
+  optionsOutline,
+  rocketOutline,
+  sendOutline,
+  sparklesOutline
 } from 'ionicons/icons';
 
 addIcons({
@@ -60,7 +70,17 @@ addIcons({
   'mail-outline': mailOutline,
   'call-outline': callOutline,
   'checkmark-circle-outline': checkmarkCircleOutline,
-  'book-outline': bookOutline
+  'book-outline': bookOutline,
+  'close-outline': closeOutline,
+  'eye-off-outline': eyeOffOutline,
+  'information-circle-outline': informationCircleOutline,
+  'lock-closed-outline': lockClosedOutline,
+  'log-out-outline': logOutOutline,
+  'notifications-off-outline': notificationsOffOutline,
+  'options-outline': optionsOutline,
+  'rocket-outline': rocketOutline,
+  'send-outline': sendOutline,
+  'sparkles-outline': sparklesOutline
 });
 
 platformBrowserDynamic()

@@ -831,6 +831,16 @@ ion-content {
   font-size: 12px;
 }
 
+/* COMPUTADOR: textos do menu inferior mais legíveis */
+
+@media (min-width: 769px) {
+
+  .bottom-item span {
+    font-size: 17px;
+  }
+
+}
+
 /* RESPONSIVIDADE — CELULAR*/
 
 @media (max-width: 768px) {

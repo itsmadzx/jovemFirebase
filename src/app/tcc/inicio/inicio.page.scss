@@ -210,6 +210,11 @@ ion-content {
   color: white;
 }
 
+.shortcut-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
 .shortcut-icon ion-icon {
   font-size: 48px;
 }
@@ -940,6 +945,11 @@ ion-content {
   .shortcut-icon {
     width: 62px;
     height: 62px;
+  }
+
+  .shortcut-icon svg {
+    width: 34px;
+    height: 34px;
   }
 
   .shortcut-icon ion-icon {

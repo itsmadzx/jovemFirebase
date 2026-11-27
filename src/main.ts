@@ -1,5 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
+import { defineCustomElement as defineIonIcon } from 'ionicons/components/ion-icon.js';
 import { addIcons } from 'ionicons'; //importando os ion-icon pro projeto inteiro
 import {
   home,
@@ -29,8 +30,21 @@ import {
   mailOutline,
   callOutline,
   checkmarkCircleOutline,
-  bookOutline
+  bookOutline,
+  closeOutline,
+  eyeOffOutline,
+  informationCircleOutline,
+  lockClosedOutline,
+  logOutOutline,
+  notificationsOffOutline,
+  optionsOutline,
+  rocketOutline,
+  sendOutline,
+  sparklesOutline
 } from 'ionicons/icons';
+
+// Registra o elemento <ion-icon>; sem isso os ícones podem ficar em branco
+defineIonIcon();
 
 addIcons({
   home,
@@ -60,7 +74,17 @@ addIcons({
   'mail-outline': mailOutline,
   'call-outline': callOutline,
   'checkmark-circle-outline': checkmarkCircleOutline,
-  'book-outline': bookOutline
+  'book-outline': bookOutline,
+  'close-outline': closeOutline,
+  'eye-off-outline': eyeOffOutline,
+  'information-circle-outline': informationCircleOutline,
+  'lock-closed-outline': lockClosedOutline,
+  'log-out-outline': logOutOutline,
+  'notifications-off-outline': notificationsOffOutline,
+  'options-outline': optionsOutline,
+  'rocket-outline': rocketOutline,
+  'send-outline': sendOutline,
+  'sparkles-outline': sparklesOutline
 });
 
 platformBrowserDynamic()

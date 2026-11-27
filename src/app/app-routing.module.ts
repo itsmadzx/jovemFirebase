@@ -24,9 +24,9 @@ const routes: Routes = [
     loadChildren: () => import('./tcc/dados-pessoais/dados-pessoais.module').then( m => m.DadosPessoaisPageModule)
   },
   {
-    path: 'home',
-    canActivate: [somenteLogado],
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'home', // endereço antigo: agora abre a tela inicial com os dados de quem logou
+    redirectTo: 'inicio',
+    pathMatch: 'full'
   },
   {
     path: '',

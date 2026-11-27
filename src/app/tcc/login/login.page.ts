@@ -91,8 +91,11 @@ export class LoginPage {
         return 'Muitas tentativas. Aguarde um pouco e tente novamente.';
       case 'auth/network-request-failed':
         return 'Sem conexão. Verifique sua internet.';
+      case 'auth/operation-not-allowed':
+      case 'auth/configuration-not-found':
+        return 'O login por e-mail e senha não está ativado no Firebase.';
       default:
-        return 'Não foi possível concluir. Tente novamente.';
+        return `Não foi possível concluir (${codigo ?? 'erro desconhecido'}).`;
     }
   }
 

@@ -38,7 +38,9 @@ export class UsuarioService {
   private auth = inject(Auth);
   private firestore = inject(Firestore);
 
-  async cadastrar(nome: string, email: string, senha: string): Promise<void> {
+  // Devolve null se tudo deu certo, ou o código do erro se a conta
+  // foi criada mas o perfil não foi salvo no Firestore.
+  async cadastrar(nome: string, email: string, senha: string): Promise<string | null> {
     const { user } = await createUserWithEmailAndPassword(this.auth, email, senha);
 
     // A conta já existe neste ponto. Se o perfil falhar, a pessoa
@@ -50,8 +52,10 @@ export class UsuarioService {
         email,
         criadoEm: serverTimestamp()
       }));
-    } catch (erro) {
+      return null;
+    } catch (erro: any) {
       console.error('Conta criada, mas o perfil não foi salvo:', erro);
+      return erro?.code ?? erro?.message ?? 'erro-desconhecido';
     }
   }
 

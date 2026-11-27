@@ -1,5 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
+import { defineCustomElement as defineIonIcon } from 'ionicons/components/ion-icon.js';
 import { addIcons } from 'ionicons'; //importando os ion-icon pro projeto inteiro
 import {
   home,
@@ -41,6 +42,9 @@ import {
   sendOutline,
   sparklesOutline
 } from 'ionicons/icons';
+
+// Registra o elemento <ion-icon>; sem isso os ícones podem ficar em branco
+defineIonIcon();
 
 addIcons({
   home,

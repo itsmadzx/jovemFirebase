@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
-import { NavController } from '@ionic/angular/lazy';
+import { NavController, ToastController } from '@ionic/angular/lazy';
 
 import { UsuarioService } from '../../services/usuario.service';
 
@@ -26,6 +26,7 @@ export class CadastroPage {
 
   private usuarioService = inject(UsuarioService);
   private nav = inject(NavController);
+  private toastController = inject(ToastController);
   private cdr = inject(ChangeDetectorRef);
 
 
@@ -112,7 +113,7 @@ export class CadastroPage {
 
     try {
 
-      await this.usuarioService.cadastrar(
+      const falhaPerfil = await this.usuarioService.cadastrar(
         this.nome.trim(),
         this.email.trim(),
         this.senha
@@ -120,6 +121,15 @@ export class CadastroPage {
 
       // Só chega aqui se a conta realmente foi criada
       await this.nav.navigateRoot('/inicio');
+
+      if (falhaPerfil) {
+        await this.avisar(
+          `Conta criada, mas os dados não foram salvos no banco (${falhaPerfil}).`,
+          'warning'
+        );
+      } else {
+        await this.avisar('Conta criada com sucesso!', 'success');
+      }
 
 
     } catch (error: any) {
@@ -155,12 +165,31 @@ export class CadastroPage {
 
       }
 
+      else if (
+        error.code === 'auth/operation-not-allowed' ||
+        error.code === 'auth/configuration-not-found'
+      ) {
+
+        this.erro =
+          'O login por e-mail e senha não está ativado no Firebase.';
+
+      }
+
+      else if (error.code === 'auth/network-request-failed') {
+
+        this.erro =
+          'Sem conexão. Verifique sua internet.';
+
+      }
+
       else {
 
         this.erro =
-          'Não foi possível criar a conta. Tente novamente.';
+          `Não foi possível criar a conta (${error.code ?? error.message}).`;
 
       }
+
+      await this.avisar(this.erro, 'danger');
 
     }
 
@@ -171,6 +200,20 @@ export class CadastroPage {
       this.cdr.detectChanges();
 
     }
+
+  }
+
+
+  private async avisar(message: string, color: string) {
+
+    const toast = await this.toastController.create({
+      message,
+      color,
+      duration: 6000,
+      position: 'top'
+    });
+
+    await toast.present();
 
   }
 

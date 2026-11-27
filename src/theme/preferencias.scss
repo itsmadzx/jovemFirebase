@@ -209,3 +209,9 @@ html.ion-palette-dark .ion-page .botao-refazer {
   background: transparent;
   border: 2px solid #8b93b8;
 }
+
+/* Com letra grande, títulos e links passam para a linha de baixo */
+html.letra-grande .ion-page .recommended-header {
+  flex-wrap: wrap;
+  gap: 8px;
+}

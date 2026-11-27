@@ -43,3 +43,67 @@
     zoom: 0.9;
   }
 }
+
+/* SOMBRAS EM CAMADAS
+   Uma sombra curta marca a borda e outras maiores dão profundidade. */
+:root {
+  --sombra-suave:
+    0 1px 2px rgba(30, 35, 120, 0.08),
+    0 4px 10px rgba(30, 35, 120, 0.08),
+    0 14px 30px rgba(30, 35, 120, 0.10);
+  --sombra-elevada:
+    0 2px 4px rgba(30, 35, 120, 0.10),
+    0 10px 20px rgba(45, 40, 160, 0.14),
+    0 24px 48px rgba(45, 40, 160, 0.16);
+  --sombra-destaque:
+    0 2px 4px rgba(55, 40, 200, 0.25),
+    0 8px 18px rgba(55, 40, 200, 0.30),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Cards */
+ion-app .ion-page :is(.shortcut, .banner, .recommendation-card, .search-box,
+  .instituicao-card, .plataforma-card, .pergunta-card, .alternativa,
+  .quick-card, .config-card, .list-item, .cadastro-form, .notification-item) {
+  box-shadow: var(--sombra-suave);
+}
+
+ion-app .ion-page :is(.shortcut, .recommendation-card, .instituicao-card,
+  .plataforma-card, .alternativa, .quick-card) {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Elementos em destaque: círculos e botões principais */
+ion-app .ion-page :is(.shortcut-icon, .accessibility, .banner-text button,
+  .cadastro-button, .logo-icon) {
+  box-shadow: var(--sombra-destaque);
+}
+
+ion-app .ion-page :is(.profile-photo, .category-icon, .company-logo, .avatar) {
+  box-shadow: var(--sombra-suave);
+}
+
+ion-app .ion-page .header {
+  box-shadow: 0 10px 30px rgba(21, 29, 163, 0.30);
+}
+
+ion-app .ion-page .bottom-menu {
+  box-shadow:
+    0 -2px 6px rgba(30, 35, 120, 0.06),
+    0 -12px 32px rgba(30, 35, 120, 0.14);
+}
+
+/* Ao passar o mouse, o card "levanta" */
+@media (hover: hover) {
+  ion-app .ion-page :is(.shortcut, .recommendation-card, .instituicao-card,
+    .plataforma-card, .alternativa, .quick-card):hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-elevada);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ion-app .ion-page * {
+    transition: none !important;
+  }
+}
